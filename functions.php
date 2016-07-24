@@ -247,22 +247,30 @@ if ( ! function_exists( 'fi_print_special_nav_class' ) ) {
 add_filter('nav_menu_css_class' , 'fi_print_special_nav_class' , 10 , 2);
 
 
-function vantage_panels_panels_row_style_attributes( $attr, $style) {
-  // echo '<pre>';
-  // print_r($style);
-  // echo '</pre>';
-  if ( !array_key_exists('row_stretch', $style)) {
-     // We'll use this to prevent the jump when loading.
-        $attr['class'][] = 'container';
-  }
-
-    return $attr;
-
-}
-add_filter('siteorigin_panels_row_style_attributes', 'vantage_panels_panels_row_style_attributes', 10, 2);
 
 /**
  * Load init.
  */
 require get_template_directory() . '/inc/init.php';
 require(  get_template_directory() . '/inc/aquaresizer.php' );
+
+function fi_print_add_html_before_row(  $attr, $style ){
+ 	$html = '';
+	if ( !array_key_exists('row_stretch', $style)) {
+	   
+	    $html .= '<div class="container">';
+	    $html .= '<div class="row">';
+	}
+    return $html;
+}
+add_filter( 'siteorigin_panels_before_row', 'fi_print_add_html_before_row',10, 2);
+
+function fi_print_add_html_after_row( $attr, $style ){
+    $html = '';
+	if ( !array_key_exists('row_stretch', $style)) {
+    	$html = '</div> </div>';
+	}
+    return $html;
+}
+
+add_filter( 'siteorigin_panels_after_row', 'fi_print_add_html_after_row',10, 2);
