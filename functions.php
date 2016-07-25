@@ -254,23 +254,122 @@ add_filter('nav_menu_css_class' , 'fi_print_special_nav_class' , 10 , 2);
 require get_template_directory() . '/inc/init.php';
 require(  get_template_directory() . '/inc/aquaresizer.php' );
 
-function fi_print_add_html_before_row(  $attr, $style ){
- 	$html = '';
-	if ( !array_key_exists('row_stretch', $style)) {
+// function fi_print_add_html_before_row(  $attr, $style ){
+//  	$html = '';
+// 	if (  $style['style']['row_stretch']=="") {
 	   
-	    $html .= '<div class="container">';
-	    $html .= '<div class="row">';
-	}
-    return $html;
-}
-add_filter( 'siteorigin_panels_before_row', 'fi_print_add_html_before_row',10, 2);
+// 	    $html .= '<div class="container">';
+// 	    $html .= '<div class="row">';
+// 	}
+//     return $html;
+// }
+// add_filter( 'siteorigin_panels_before_row', 'fi_print_add_html_before_row',10, 2);
 
-function fi_print_add_html_after_row( $attr, $style ){
-    $html = '';
-	if ( !array_key_exists('row_stretch', $style)) {
-    	$html = '</div> </div>';
-	}
-    return $html;
+// function fi_print_add_html_after_row( $attr, $style ){
+//     $html = '';
+// 	if ($style['style']['row_stretch']=="") {
+//     	$html = '</div> </div>';
+// 	}
+//     return $html;
+// }
+
+// add_filter( 'siteorigin_panels_after_row', 'fi_print_add_html_after_row',10, 2);
+function barberia_row_style_fields($fields) {
+    
+
+$fields['row_stretch'] = array(
+      'name'        => __('', 'siteorigin-panels'),
+      'type'        => 'hidden',
+      'group'       => 'layout',   
+      
+);
+
+$fields['row_container'] = array(
+      'name'        => __('Row Styles', 'siteorigin-panels'),
+      'type'        => 'select',
+      'group'       => 'layout',
+      'description' => __('Choose between contained or full row stle', 'siteorigin-panels'),
+      'priority'    => 10,
+      'options'     => array(
+            'container'        => __('Container', 'siteorigin-panels'),
+            'container-row'        => __('Container with row', 'siteorigin-panels'),
+            'full-width'        => __('Full-Width', 'siteorigin-panels'),
+            
+            ),
+);
+$fields['overlay'] = array(
+      'name'        => __('Overlay', 'siteorigin-panels'),
+      'type'        => 'checkbox',
+      'group'       => 'design',
+      'description' => __('If enabled, the background image will have a overlay/dark effect.', 'siteorigin-panels'),
+      'priority'    => 10,
+);
+  return $fields;
 }
 
-add_filter( 'siteorigin_panels_after_row', 'fi_print_add_html_after_row',10, 2);
+add_filter( 'siteorigin_panels_row_style_fields', 'barberia_row_style_fields');
+
+function barberia_panels_row_container_start( $attr, $style ) {
+    
+    var_dump($style['style']['row_container']);
+    if(isset($style['style']['row_container']) && $style['style']['row_container']!='container-row')
+    echo '<div class="'.$style['style']['row_container'].'">';
+    if(isset($style['style']['row_container']) && $style['style']['row_container']=='container-row'){
+    echo '<div class="container">';
+    echo '<div class="row">';
+    }
+   
+
+}
+
+add_filter('siteorigin_panels_row_container_start', 'barberia_panels_row_container_start', 10, 2);
+
+
+function barberia_panels_row_container_end( $attr, $style ) { 
+    
+    
+    if(isset($style['style']['row_container'])&& $style['style']['row_container']!='container-row')
+    echo '</div>';
+    if(isset($style['style']['row_container']) && $style['style']['row_container']=='container-row'){
+    echo '</div>';
+    echo '</div>';
+        }
+   
+
+}
+add_filter('siteorigin_panels_row_container_end', 'barberia_panels_row_container_end', 10, 2);
+
+
+function barberia_row_style_attributes( $attributes, $args ) {
+
+    if( !empty( $args['parallax'] ) ) {
+        array_push($attributes['class'], 'fullscreen ');
+        array_push($attributes['class'], ' custom-section');         
+        $attributes['data-stellar-background-ratio']=$args['parallax_rate'];
+        $attributes['data-stellar-offset-parent']='true';
+    }
+
+    return $attributes;
+}
+add_filter('siteorigin_panels_row_style_attributes', 'barberia_row_style_attributes', 10, 2);
+function custom_row_style_fields($fields) {
+  $fields['inner'] = array(
+      'name'        => __('Inner Container', 'siteorigin-panels'),
+      'type'        => 'checkbox',
+      'group'       => 'layout',
+      'description' => __('Add inner class to container', 'siteorigin-panels'),
+      'priority'    => 4,
+  );
+
+  return $fields;
+}
+
+add_filter( 'siteorigin_panels_row_style_fields', 'custom_row_style_fields' );
+add_filter('siteorigin_panels_row_style_attributes', 'custom_row_style_attributes', 10, 2);
+function custom_row_style_attributes( $attributes, $args ) {
+    if( !empty( $args['inner'] ) ) {
+        array_push($attributes['class'], 'inner');
+    }
+
+    return $attributes;
+}
