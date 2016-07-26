@@ -309,35 +309,32 @@ $fields['overlay'] = array(
 
 add_filter( 'siteorigin_panels_row_style_fields', 'barberia_row_style_fields');
 
-function barberia_panels_row_container_start( $attr, $style ) {
-    
-    var_dump($style['style']['row_container']);
-    if(isset($style['style']['row_container']) && $style['style']['row_container']!='container-row')
-    echo '<div class="'.$style['style']['row_container'].'">';
-    if(isset($style['style']['row_container']) && $style['style']['row_container']=='container-row'){
+
+
+function bella_panels_row_container_start( $grid, $attributes ) {
+
+ 
+    if(isset($attributes['style']['row_container']) && $attributes['style']['row_container']=='container-row'){
     echo '<div class="container">';
     echo '<div class="row">';
     }
-   
 
 }
 
-add_filter('siteorigin_panels_row_container_start', 'barberia_panels_row_container_start', 10, 2);
+add_filter('siteorigin_panels_before_row', 'bella_panels_row_container_start', 10, 2);
 
 
-function barberia_panels_row_container_end( $attr, $style ) { 
-    
-    
-    if(isset($style['style']['row_container'])&& $style['style']['row_container']!='container-row')
-    echo '</div>';
-    if(isset($style['style']['row_container']) && $style['style']['row_container']=='container-row'){
-    echo '</div>';
-    echo '</div>';
-        }
-   
+function bella_panels_row_container_end( $grid, $attributes ) { 
+
+    if(isset($attributes['style']['row_container']) && $attributes['style']['row_container']=='container-row'){
+      echo '</div>';
+      echo '</div>';
+    }
 
 }
-add_filter('siteorigin_panels_row_container_end', 'barberia_panels_row_container_end', 10, 2);
+add_filter('siteorigin_panels_after_row', 'bella_panels_row_container_end', 10, 2);
+
+
 
 
 function barberia_row_style_attributes( $attributes, $args ) {

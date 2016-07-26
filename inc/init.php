@@ -13,7 +13,8 @@ if ( class_exists( 'SiteOrigin_Widget' ) ) {
 		'testimonial' => 'testimonial/testimonial.php',
 		'client'      =>'client/client.php',
 		'post'        =>'post/post.php',
-		'address'     =>'address/address.php'
+		'address'     =>'address/address.php',
+		'graph'       => 'graph/graph.php'
 	);
 
 	$temp_dir = get_template_directory();
