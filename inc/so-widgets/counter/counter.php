@@ -27,6 +27,11 @@ class Fi_Print_Counter_Widget extends SiteOrigin_Widget {
 							'label' => __( 'Counter Number', 'fi_print' )
 
 						),
+						'suffix_text'=>  array(
+							'type'  => 'text',
+							'label' => __( 'Text', 'fi_print' ),
+							'description' => __( 'Text to append after the counter number.eg %', 'fi_print' )
+						),
 						
 					),
 				),

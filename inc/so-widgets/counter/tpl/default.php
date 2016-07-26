@@ -3,7 +3,7 @@
 	<?php   foreach ( $instance['counter_repeater'] as $counter_repeater ){ ?>
 		<li>
 			<?php if ( ! empty( $counter_repeater['counter_percent'] ) ) : ?>
-				<h5><span data-from ="0" data-to="<?php echo esc_attr( $counter_repeater['counter_percent'] );?>"><?php echo esc_attr( $counter_repeater['counter_percent'] );   ?></span></h5>
+				<h5><span data-from ="0" data-to="<?php echo esc_attr( $counter_repeater['counter_percent'] );?>"><?php echo esc_attr( $counter_repeater['counter_percent'] );   ?> </span><?php echo esc_attr($counter_repeater['suffix_text']);?></h5>
 			<?php endif; ?>
 			<?php if ( ! empty( $counter_repeater['counter_title'] ) ) : ?>
 				<h6><?php echo esc_attr( $counter_repeater['counter_title'] );   ?></h6>
