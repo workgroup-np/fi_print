@@ -34,7 +34,7 @@ class Fi_Print_Graph_Widget extends SiteOrigin_Widget {
 							'type'  => 'text',
 							'label' => __( 'Value corresponds to X axis', 'fi_print' )
 						),
-						'x_axis_value' => array(
+						'y_axis_value' => array(
 							'type'  => 'text',
 							'label' => __( 'Value corresponds to Y axis', 'fi_print' )
 						),
