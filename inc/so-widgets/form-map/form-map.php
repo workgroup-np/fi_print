@@ -23,7 +23,9 @@ class Fi_Print_Form_Map_Widget extends SiteOrigin_Widget {
 				),
 				'marker' => array(
 					'type'  => 'media',
-					'label' => __( 'Upload Marker Image', 'fi_print' )
+					'label' => __( 'Upload Marker Image', 'fi_print' ),
+					'library' => 'image',
+        			'fallback' => true
 				),
 				'description' => array(
 					'type'  => 'textarea',

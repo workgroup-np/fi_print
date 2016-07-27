@@ -1,8 +1,7 @@
 <?php 
 $latitude= esc_attr($instance['latitude']);
 $longitude= esc_attr($instance['longitude']);
-$marker_url=esc_url($instance['marker']);
-$marker_url=wp_get_attachment_image_src($marker_url, 'full'); 
+$marker_url=wp_get_attachment_image_src( $instance['marker'], 'full');
 $description=wp_kses_post($instance['description']);
 $shortcode=$instance['contact_form'];
 ?>
@@ -34,7 +33,7 @@ function initMap() {
     position: {lat: <?php echo $latitude;?>, lng: <?php echo $longitude;?>},
     map: map,
     animation: google.maps.Animation.DROP,
-    icon: "<?php echo $marker_url;?>"
+    icon: "<?php echo $marker_url[0];?>"
   });
   var infowindow = new google.maps.InfoWindow({
     content: "<?php echo $description;?>"
