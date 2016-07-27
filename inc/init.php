@@ -17,7 +17,8 @@ if ( class_exists( 'SiteOrigin_Widget' ) ) {
 		'graph'            => 'graph/graph.php',
 		'highlights'       =>'company-highlights/highlights.php',
 		'sliding-services' =>'sliding-services/sliding-services.php',
-		'tabs'		=>'tabs/tabs.php'
+		'tabs'		=>'tabs/tabs.php',
+		'form-map'		=>'form-map/form-map.php'
 
 	);
 
