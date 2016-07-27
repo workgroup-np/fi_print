@@ -1,5 +1,4 @@
 <section class="bg-img-light" style="background-image: url(assets/img/img-9.jpg)">
-	<div class="container">
 		<header class="section-header">
 			<?php if (!empty( $instance['title'] )) :?>
 				<h2><?php echo esc_attr( $instance['title']) ?></h2>
@@ -39,7 +38,5 @@
 			</div>
 		<?php endforeach; ?>
 	<?php endif; ?>
-	</div>
-
 	</div>
 </section>  
