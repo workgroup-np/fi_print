@@ -15,31 +15,40 @@ class Fi_Print_Slider_Widget extends SiteOrigin_Widget {
 				'slider_repeater' => array(
 					'type'  => 'repeater',
 					'label' => __('Slider Details.', 'fi_print'),
+					'item_name' => __('Frame', 'so-widgets-bundle'),
+					'item_label' => array(
+						'selector' => "[id*='frames-url']",
+						'update_event' => 'change',
+						'value_method' => 'val'
+					),
 					'fields' => array(
 						'image' => array(
 							'type'  => 'media',
 							'label' => __( 'Select Slider Image', 'fi_print' )
+					),
+
+					'content' => array(
+						'type' => 'tinymce',
+						'label' => __( 'Content', 'so-widgets-bundle' ),
+					),
+					'content_align' => array(
+						'type'     => 'select',
+						'label'    => __( 'Content Alignment', 'widget-form-fields-text-domain' ),
+						'default'  => 'the_other_thing',
+						'options'  => array(
+							'left'   => __( 'Align Left', 'widget-form-fields-text-domain' ),
+							'right'  => __( 'Align Right', 'widget-form-fields-text-domain' ),
+							'center' => __( 'Align Center', 'widget-form-fields-text-domain' ),
 						),
-						'title' => array(
-							'type'  => 'text',
-							'label' => __( 'Slider Title', 'fi_print' )
-						),
-						'sub_title' => array(
-							'type'  => 'text',
-							'label' => __( 'Slider Subtitle', 'fi_print' )
-						),
-						'text' => array(
-							'type' => 'text',
-							'label' => __('Read More Text', 'fi_print'),
-						),
-						'url' => array(
-							'type' => 'text',
-							'label' => __('Destination URL', 'fi_print'),
-						),
-						'new_window' => array(
-							'type' => 'checkbox',
-							'label' => __('Open In New Window', 'fi_print'),
-						),
+					),
+					'overlay_checkbox' => array(
+					        'type' => 'checkbox',
+					        'label' => __( 'Enable Overlay?', 'widget-form-fields-text-domain' ),
+					        'default' => false
+					 ),
+
+				
+
 
 					),
 				),

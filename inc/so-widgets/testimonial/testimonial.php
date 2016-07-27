@@ -44,8 +44,18 @@ class Fi_Print_Testimonial_Widget extends SiteOrigin_Widget {
 							'label' => __( 'Testimonial Content', 'fi_print' )
 
 						),
+					
 						
 					),
+				),
+				'testimonial_style' => array(
+						'type'     => 'select',
+						'label'    => __( 'testimonials Style', 'fi_print' ),
+						'default'  => 'one',
+						'options'  => array(
+							'one' => __( 'Style One', 'fi_print' ),
+							'two'  => __( 'Style Two', 'fi_print' ),
+						),
 				),
 
 			)
