@@ -253,6 +253,8 @@ add_filter('nav_menu_css_class' , 'fi_print_special_nav_class' , 10 , 2);
  */
 require get_template_directory() . '/inc/init.php';
 require(  get_template_directory() . '/inc/aquaresizer.php' );
+require(  get_template_directory() . '/inc/meta-box.php' );
+
 
 // function fi_print_add_html_before_row(  $attr, $style ){
 //  	$html = '';
