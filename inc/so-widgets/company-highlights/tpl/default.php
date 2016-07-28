@@ -1,4 +1,4 @@
-<section class="border-bottom">
+<section class="border-bottom company-highlights">
         <div class="container">
           <div class="row">
 
@@ -12,20 +12,19 @@
 					<?php endif; ?>
               </header>
             </div>
-
-            	<?php foreach($instance['company_highlights_repeater'] as $item) : ?>
-			  		<div class="col-xs-12 col-md-6 col-lg-3 feature">
-					<?php if ( ! empty( $item['icon'] ) ) : ?>
-					<?php echo siteorigin_widget_get_icon( $item['icon'] );?>
-					<?php endif; ?>
-					<?php if ( ! empty( $item['title'] ) ) : ?>
-					<h5><?php echo esc_html($item['title']) ; ?></h5>
-					<?php endif; ?>
-					<?php if ( ! empty( $item['sub_title'] ) ) : ?>
-					<p><?php echo esc_html($item['sub_title']) ; ?></p>
-					<?php endif; ?>
-	            	</div>
-				 <?php endforeach; ?>
+        	<?php foreach($instance['company_highlights_repeater'] as $item) : ?>
+		  		<div class="col-xs-12 col-md-6 col-lg-3 feature">
+				<?php if ( ! empty( $item['icon'] ) ) : ?>
+				<?php echo siteorigin_widget_get_icon( $item['icon'] );?>
+				<?php endif; ?>
+				<?php if ( ! empty( $item['title'] ) ) : ?>
+				<h5><?php echo esc_html($item['title']) ; ?></h5>
+				<?php endif; ?>
+				<?php if ( ! empty( $item['sub_title'] ) ) : ?>
+				<p><?php echo esc_html($item['sub_title']) ; ?></p>
+				<?php endif; ?>
+            	</div>
+			 <?php endforeach; ?>
         </div>
     </div>
 </section>

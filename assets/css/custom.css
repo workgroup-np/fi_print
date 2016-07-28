@@ -1,3 +1,14 @@
 .demo-btn-margin .btn {
   margin-bottom: 6px;
 }
+
+.company-highlights .sow-icon-elegantline,
+.company-highlights .sow-icon-fontawesome,
+.company-highlights .sow-icon-genericons,
+.company-highlights .sow-icon-icomoon,
+.company-highlights .sow-icon-typicons,
+.company-highlights .sow-icon-ionicons
+ {
+    font-size: 3rem;
+    color: #f9c841;
+}

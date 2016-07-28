@@ -17,7 +17,7 @@
 				<div class="swiper-container services-slider">
 					<div class="swiper-wrapper">
 						<?php   foreach ( $instance['sliding-services_repeater'] as $services_detail ){ 
-							$image_url = wp_get_attachment_image_src($services_detail['image'], 'full'); ?>
+							$image_url = wp_get_attachment_image_src($services_detail['image'], 'full');?>
 							<div class="swiper-slide">
 								<div class="card card-content">
 									<a href="#"><img class="card-img" src="<?php echo esc_url( $image_url[0] ); ?>" alt="..."></a>
