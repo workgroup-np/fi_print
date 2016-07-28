@@ -309,7 +309,30 @@ function fi_print_cmb_metaboxes( array $meta_boxes ) {
         'normal'   => 'high',
         'show_names' => true, // Show field names on the left
         'fields'     => array(
-
+             array(
+                'name' => __('Project Budget','fi_print'),
+                'desc' => __('Pleae give the project budget. eg:$300','fi_print'),
+                'id' => $prefix . 'portfolio_budget',
+                'type' => 'text_medium'
+            ),
+             array(
+                'name' => __('Project Advisor Subtitle','fi_print'),
+                'desc' => __('Give a list of project advisor seperated by commas.','fi_print'),
+                'id' => $prefix . 'portfolio_advisor',
+                'type' => 'text_medium'
+            ),
+             array(
+                'name' => __('Project Duration','fi_print'),
+                'desc' => __('Please enter the project duration eg:3 months','fi_print'),
+                'id' => $prefix . 'portfolio_duration',
+                'type' => 'text_medium'
+            ),
+             array(
+                'name' => __('Project Satisfaction','fi_print'),
+                'desc' => __('Please enter the project satisfaction.eg:100%','fi_print'),
+                'id' => $prefix . 'portfolio_satisfaction',
+                'type' => 'text_medium'
+            ),
             array(
                 'name' => __('Project Subtitle','fi_print'),
                 'desc' => __('Please enter the short intro of project as subtitle','fi_print'),
@@ -358,4 +381,39 @@ function fi_print_cmb_metaboxes( array $meta_boxes ) {
 
     return $meta_boxes;
 }
+// cmb2
+function fi_print_post_meta() {
+
+    $cmb = new_cmb2_box( array(
+        'id'           => 'fi_print_portfolio_post_meta',
+        'title'        => 'Custom Portfolio Options',
+        'object_types' => array( 'portfolio' ),
+    ) );
+
+    $cmb->add_field( array(
+        'name' => __('Project Budget','fi_print'),
+        'desc' => __('Pleae give the project budget. eg:$300','fi_print'),
+        'id' => $prefix . 'portfolio_budget',
+        'type' => 'text_medium'
+    ) );$cmb->add_field( array(
+        'name' => __('Project Advisor Subtitle','fi_print'),
+        'desc' => __('Give a list of project advisor seperated by commas.','fi_print'),
+        'id' => $prefix . 'portfolio_advisor',
+        'type' => 'text_medium'
+    ) );
+    $cmb->add_field(  array(
+        'name' => __('Project Duration','fi_print'),
+        'desc' => __('Please enter the project duration eg:3 months','fi_print'),
+        'id' => $prefix . 'portfolio_duration',
+        'type' => 'text_medium'
+    ));
+    $cmb->add_field( array(
+         'name' => __('Project Satisfaction','fi_print'),
+        'desc' => __('Please enter the project satisfaction.eg:100%','fi_print'),
+        'id' => $prefix . 'portfolio_satisfaction',
+        'type' => 'text_medium'
+    ) );
+
+}
+add_action( 'cmb2_admin_init', 'fi_print_post_meta' );
 ?>
