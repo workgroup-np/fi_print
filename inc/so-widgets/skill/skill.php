@@ -37,8 +37,7 @@ class Fi_Print_Skill_Widget extends SiteOrigin_Widget {
 
 						'skill_percent'=>  array(
 							'type'  => 'text',
-							'label' => __( 'Skill Percent', 'fi_print' ),
-							'description' => __( 'Provide the numeric value eg:95', 'fi_print' )
+							'label' => __( 'Skill Percent', 'fi_print' )
 
 						),
 						

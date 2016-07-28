@@ -26,6 +26,16 @@ class Fi_Print_Latest_Post_Widget extends SiteOrigin_Widget {
 					'label' => __( 'Post Number', 'fi_print' )
 
 				),
+				'post_style' => array(
+					'type'     => 'select',
+					'label'    => __( 'Post  Style', 'fi_print' ),
+					'default'  => 'one',
+					'options'  => array(
+						'one' => __( 'Style One', 'fi_print' ),
+						'two'  => __( 'Style Two', 'fi_print' ),
+					),
+				),
+
 
 			)
 		);
