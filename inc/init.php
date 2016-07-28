@@ -20,8 +20,6 @@ if ( class_exists( 'SiteOrigin_Widget' ) ) {
 		'tabs'		=>'tabs/tabs.php',
 		'form-map'		=>'form-map/form-map.php',
 		'download-btn'		=>'download-btn/download-btn.php',
-		'accordion'		=>'accordion/accordion.php'
-
 	);
 
 	$temp_dir = get_template_directory();
