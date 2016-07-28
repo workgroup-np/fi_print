@@ -23,6 +23,7 @@ if ( class_exists( 'SiteOrigin_Widget' ) ) {
 		'form-map'		=>'form-map/form-map.php',
 		'download-btn'		=>'download-btn/download-btn.php',
 
+
 	);
 
 	$temp_dir = get_template_directory();
