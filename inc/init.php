@@ -19,6 +19,7 @@ if ( class_exists( 'SiteOrigin_Widget' ) ) {
 		'sliding-services' =>'sliding-services/sliding-services.php',
 		'tabs'		=>'tabs/tabs.php',
 		'form-map'		=>'form-map/form-map.php',
+		'download-btn'		=>'download-btn/download-btn.php',
 		'accordion'		=>'accordion/accordion.php'
 
 	);
