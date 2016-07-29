@@ -220,8 +220,8 @@ if ( ! function_exists( 'fi_print_custom_nav_class' ) ) {
 	
 	function fi_print_custom_nav_class( $classes, $item ){
 
-				$classes[] = 'nav-item';
-				return $classes;
+			$classes[] = 'nav-item';
+			return $classes;
 		}
 }
 
@@ -246,8 +246,11 @@ add_filter('nav_menu_css_class' , 'fi_print_special_nav_class' , 10 , 2);
  * Load init.
  */
 require get_template_directory() . '/inc/init.php';
-require(  get_template_directory() . '/inc/aquaresizer.php' );
-require(  get_template_directory() . '/inc/meta-box.php' );
+require get_template_directory() . '/inc/aquaresizer.php';
+require get_template_directory() . '/inc/meta-box.php';
+require get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+require get_template_directory() . '/inc/hook/tgm.php';
+
 
 if ( ! function_exists( 'fi_print_row_style_fields' ) ) {
 
@@ -314,9 +317,6 @@ if ( ! function_exists( 'fi_print_panels_row_container_end' ) ) {
 	add_filter('siteorigin_panels_after_row', 'fi_print_panels_row_container_end', 10, 2);
 }
 
-
-
-
 function fi_print_row_style_attributes( $attributes, $args ) {
 
 		if( !empty( $args['parallax'] ) ) {
@@ -350,3 +350,5 @@ function custom_row_style_attributes( $attributes, $args ) {
 
 		return $attributes;
 }
+
+
