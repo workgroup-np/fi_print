@@ -30,26 +30,26 @@ $attributes = get_post_meta( get_the_ID(), 'fi_print_advisor_attribute_repeat_gr
             	<?php endif;?>
                 <div class="media-body v-center">
                   <ul class="advisor-detail">
-                    <li><strong><?php _e('Name:','fi_print')?></strong><?php the_title();?></li>
+                    <li><strong><?php _e('Name:','fi-print')?></strong><?php the_title();?></li>
 
                     <?php if($expert_in):?>
-                    <li><strong><?php _e('Expert in:','fi_print')?></strong><?php echo esc_attr( $expert_in );?></li>
+                    <li><strong><?php _e('Expert in:','fi-print')?></strong><?php echo esc_attr( $expert_in );?></li>
                 	<?php endif;?>
                     
                     <?php if($age):?>
-                    <li><strong><?php _e('Age:','fi_print')?></strong><?php echo esc_attr( $age );?></li>
+                    <li><strong><?php _e('Age:','fi-print')?></strong><?php echo esc_attr( $age );?></li>
                     <?php endif;?>
                     
                     <?php if($experience):?>
-                    <li><strong><?php _e('Experiences:','fi_print')?></strong><?php echo esc_attr( $experience );?></li>
+                    <li><strong><?php _e('Experiences:','fi-print')?></strong><?php echo esc_attr( $experience );?></li>
                     <?php endif;?>
                     
                     <?php if($email):?>
-                    <li><strong><?php _e('Email:','fi_print')?></strong><?php echo esc_attr( $email );?></li>
+                    <li><strong><?php _e('Email:','fi-print')?></strong><?php echo esc_attr( $email );?></li>
                     <?php endif;?>
                     
                     <?php if($phone):?>
-                    <li><strong><?php _e('Phone:','fi_print')?></strong><?php echo esc_attr( $phone );?></li>
+                    <li><strong><?php _e('Phone:','fi-print')?></strong><?php echo esc_attr( $phone );?></li>
                     <?php endif;?>
                   </ul>
                 </div>

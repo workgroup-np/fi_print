@@ -20,7 +20,7 @@ if( !empty($page_setting_image) ){
         <div class="container">
           <header class="section-header border-bottom">
             <ol class="<?php echo $ol_class;?>">
-              <li><a href="<?php echo esc_url(home_url());?>"><?php _e('Home', 'fi_print'); ?></a></li>
+              <li><a href="<?php echo esc_url(home_url());?>"><?php _e('Home', 'fi-print'); ?></a></li>
               <li class="active"><?php the_title();?></li>
             </ol>
             <h1><?php if( is_single() ){ the_title();} else { echo esc_html($page_setting_title); }?></h1>

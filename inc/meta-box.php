@@ -36,60 +36,60 @@ function fi_print_cmb_metaboxes() {
     ) );
 
     $cmb->add_field( array(
-    'name' => __('Advisor\'s Age','fi_print'),
+    'name' => __('Advisor\'s Age','fi-print'),
     'id' => $prefix . 'age',
     'type' => 'text'
     ) );
     
     $cmb->add_field( array(
-    'name' => __('Expert In:','fi_print'),
-    'desc' => __('Please enter the advisor\'s area of expertise','fi_print'),
+    'name' => __('Expert In:','fi-print'),
+    'desc' => __('Please enter the advisor\'s area of expertise','fi-print'),
     'id' => $prefix . 'expertin',
     'type' => 'text'
     ) );
 
     $cmb->add_field(array(
-    'name' => __('Advisor\'s Experience(in Years)','fi_print'),
+    'name' => __('Advisor\'s Experience(in Years)','fi-print'),
     'id' => $prefix . 'experience',
     'type' => 'text'
     ) );
 
     $cmb->add_field( array(
-    'name' => __('Advisor\'s Email','fi_print'),
+    'name' => __('Advisor\'s Email','fi-print'),
     'id' => $prefix . 'email',
     'type' => 'text_email'
     ) );
 
     $cmb->add_field(  array(
-    'name' => __('Advisor\'s Phone Number','fi_print'),
+    'name' => __('Advisor\'s Phone Number','fi-print'),
     'id' => $prefix . 'phone',
     'type' => 'text'
     ) );
 
     $cmb->add_field(  array(
-    'name' => __('Personal Facebook Url','fi_print'),
-    'desc' => __('Please enter the advisor\'s facebook url','fi_print'),
+    'name' => __('Personal Facebook Url','fi-print'),
+    'desc' => __('Please enter the advisor\'s facebook url','fi-print'),
     'id' => $prefix . 'facebook',
     'type' => 'text_url'
     ) );
 
     $cmb->add_field( array(
-    'name' => __('Personal Twitter Url','fi_print'),
-    'desc' => __('Please enter the advisor\'s twitter url','fi_print'),
+    'name' => __('Personal Twitter Url','fi-print'),
+    'desc' => __('Please enter the advisor\'s twitter url','fi-print'),
     'id' => $prefix . 'twitter',
     'type' => 'text_url'
     ) );
 
     $cmb->add_field( array(
-    'name' => __('Personal Google Plus Url','fi_print'),
-    'desc' => __('Please enter the advisor\'s Google Plus url','fi_print'),
+    'name' => __('Personal Google Plus Url','fi-print'),
+    'desc' => __('Please enter the advisor\'s Google Plus url','fi-print'),
     'id' => $prefix . 'googlep',
     'type' => 'text_url'
     ) );
 
     $cmb->add_field( array(
-    'name' => __('Personal Linkedin Url','fi_print'),
-    'desc' => __('Please enter the advisor\'s linkedin url','fi_print'),
+    'name' => __('Personal Linkedin Url','fi-print'),
+    'desc' => __('Please enter the advisor\'s linkedin url','fi-print'),
     'id' => $prefix . 'linkedin',
     'type' => 'text_url'
     ) );

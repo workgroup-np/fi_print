@@ -23,7 +23,7 @@
 				<div class="card card-service" <?php if( $img_url ):?> style="background-image: url(<?php echo esc_url($n_img);?>)" <?php endif;?>>
 					<div class="card-block">
 						<p class="card-text"><?php echo wp_trim_words( $description, 10, '...' );?></p>
-						<a class="btn btn-primary-link" href="<?php the_permalink(); ?>"><?php _e('Read more','fi_print')?> <i class="fa fa-angle-right"></i></a>
+						<a class="btn btn-primary-link" href="<?php the_permalink(); ?>"><?php _e('Read more','fi-print')?> <i class="fa fa-angle-right"></i></a>
 						<h5 class="card-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 					</div>
 				</div>

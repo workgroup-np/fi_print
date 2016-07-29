@@ -15,15 +15,15 @@ if ( comments_open() ) : ?>
         'email'   => '<div class="form-group col-xs-12 col-sm-6"><input id="email" type="text" class="form-control" placeholder="Email address" type="email" name="email" value="' . esc_attr(  $commenter['comment_author_email'] ) .'" size="30"'. $aria_req . '/></div>'
     );
     $args = array (
-        'title_reply'         => __( '<h3>Post a comment</h3>', 'fi_print' ),
+        'title_reply'         => __( '<h3>Post a comment</h3>', 'fi-print' ),
         'id_form'             => 'comments_form',
         'id_submit'           => 'comment-submit',
         'comment_field'       =>  '<div class="form-group col-xs-12"><textarea id="comment" name="comment" class="form-control" placeholder="Comment" aria-required="true"></textarea></div>',
         'class_form'          =>'form-comment row',
         'class_submit'        =>'btn btn-secondary',
-        'label_submit'        =>__('Submit','fi_print'),
+        'label_submit'        =>__('Submit','fi-print'),
         'fields'              => apply_filters( 'comment_form_default_fields', $fields ),
-        'logged_in_as'        => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>','fi_print'), get_edit_user_link(), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink($post->ID) ) ) ) . '</p>',
+        'logged_in_as'        => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>','fi-print'), get_edit_user_link(), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink($post->ID) ) ) ) . '</p>',
 
     );
    comment_form($args);    ?>
@@ -32,14 +32,14 @@ if ( comments_open() ) : ?>
 <div class="comment-list">
     <?php if ( post_password_required() ) : ?>
         <p class="nopassword">
-            <?php _e( 'This post is password protected. Enter the password to view any comments.', 'fi_print' ); ?>
+            <?php _e( 'This post is password protected. Enter the password to view any comments.', 'fi-print' ); ?>
         </p>
     <?php return; endif; ?>
     <?php $ncom = get_comments_number();
     if ($ncom>0) :
         echo '<h3>';
         
-         _e('Recent Comments','fi_print');
+         _e('Recent Comments','fi-print');
         echo '</h3>';
         // Comment List
             $args = array (

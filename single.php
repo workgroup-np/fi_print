@@ -35,7 +35,7 @@ if (!defined('ABSPATH')) {echo '<h1>Forbidden</h1>'; exit();} get_header(); ?>
                     <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                         <ul class="entry-header-meta">
                             <li><?php the_time('jS F, Y') ?></li>
-                            <li><?php _e('By: ', 'fi_print'); ?> <a href=" <?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php  echo  the_author_meta( 'display_name',$author_id );?></a></li>
+                            <li><?php _e('By: ', 'fi-print'); ?> <a href=" <?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php  echo  the_author_meta( 'display_name',$author_id );?></a></li>
                         </ul>
                     </header>
                                     
@@ -60,8 +60,8 @@ if (!defined('ABSPATH')) {echo '<h1>Forbidden</h1>'; exit();} get_header(); ?>
                         }
                     }?>
                     <footer class="entry-meta">
-                    <p class="categories"><strong><?php _e('Categories:','fi_print')?></strong> <?php echo trim( $output, $separator );?>
-                    <?php if( !empty($output_tags) ):?><p class="categories"><strong><?php _e('Tags:','fi_print')?></strong> <?php echo trim( $output_tags, $separator );?></p><?php endif;?>
+                    <p class="categories"><strong><?php _e('Categories:','fi-print')?></strong> <?php echo trim( $output, $separator );?>
+                    <?php if( !empty($output_tags) ):?><p class="categories"><strong><?php _e('Tags:','fi-print')?></strong> <?php echo trim( $output_tags, $separator );?></p><?php endif;?>
                     </footer>
 
                 </article>

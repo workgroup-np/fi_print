@@ -3,10 +3,10 @@
 class Fi_Print_Youtube_Video_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'fi_print-youtube_video',
-			__( 'Fi Print: Youtube_Video', 'fi_print' ),
+			'fi-print-youtube_video',
+			__( 'Fi Print: Youtube_Video', 'fi-print' ),
 			array(
-				'description' => __('Fi Print Youtube Video Builder', 'fi_print' ),
+				'description' => __('Fi Print Youtube Video Builder', 'fi-print' ),
 
 				),
 			array(),
@@ -14,21 +14,21 @@ class Fi_Print_Youtube_Video_Widget extends SiteOrigin_Widget {
 
 				'url' => array(
 					'type'     => 'text',
-					'label'    => __( 'Video Url', 'fi_print' ),
+					'label'    => __( 'Video Url', 'fi-print' ),
 					'sanitize' =>'url'
 				),
 				
 				'image' => array(
 					'type'  => 'media',
-					'label' => __( 'Select Thumbnail Image', 'fi_print' )
+					'label' => __( 'Select Thumbnail Image', 'fi-print' )
 				),
 
 				'icon' => array(
 					'type' => 'select',
-					'label' => __('Icon Type', 'fi_print'),
+					'label' => __('Icon Type', 'fi-print'),
 					'options' => array(
-						'circle' => __('Circled', 'fi_print'),
-						'square' => __('Squared', 'fi_print'),
+						'circle' => __('Circled', 'fi-print'),
+						'square' => __('Squared', 'fi-print'),
 					)
 				),	
 				
@@ -40,4 +40,4 @@ class Fi_Print_Youtube_Video_Widget extends SiteOrigin_Widget {
 	}
 
 }
-siteorigin_widget_register('fi_print-youtube_video', __FILE__,'Fi_Print_Youtube_Video_Widget');
+siteorigin_widget_register('fi-print-youtube_video', __FILE__,'Fi_Print_Youtube_Video_Widget');

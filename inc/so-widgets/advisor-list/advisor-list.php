@@ -4,9 +4,9 @@ class Fi_Print_Advisor_List_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
 			'fi_print-advisor_list',
-			__( 'Fi Print: Advisor List', 'fi_print' ),
+			__( 'Fi Print: Advisor List', 'fi-print' ),
 			array(
-				'description' => __('Fi Print Displays a lists of advisors', 'fi_print' ),
+				'description' => __('Fi Print Displays a lists of advisors', 'fi-print' ),
 
 				),
 			array(),
@@ -14,19 +14,19 @@ class Fi_Print_Advisor_List_Widget extends SiteOrigin_Widget {
 
 				'title' => array(
 					'type'  => 'text',
-					'label' => __( 'Widget Title', 'fi_print' ),
+					'label' => __( 'Widget Title', 'fi-print' ),
 
 				),
 
 				'sub-title' => array(
 					'type'  => 'text',
-					'label' => __( 'Widget Sub-title', 'fi_print' ),
+					'label' => __( 'Widget Sub-title', 'fi-print' ),
 
 				),
 				
 				'number' => array(
 					'type'  => 'number',
-					'label' => __( 'Number of advisors to display', 'fi_print' ),
+					'label' => __( 'Number of advisors to display', 'fi-print' ),
 
 				),
 

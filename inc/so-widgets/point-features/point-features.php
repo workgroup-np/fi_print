@@ -3,10 +3,10 @@
 class Fi_Print_Point_Features_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'fi_print-point_features',
-			__( 'Fi Print: Point Features', 'fi_print' ),
+			'fi-print-point_features',
+			__( 'Fi Print: Point Features', 'fi-print' ),
 			array(
-				'description' => __('Displays features in block style', 'fi_print' ),
+				'description' => __('Displays features in block style', 'fi-print' ),
 
 				),
 			array(),
@@ -14,11 +14,11 @@ class Fi_Print_Point_Features_Widget extends SiteOrigin_Widget {
 
 				'title' => array(
 					'type'  => 'text',
-					'label' => __( 'widget Title', 'fi_print' )
+					'label' => __( 'widget Title', 'fi-print' )
 				),
 				'sub_title' => array(
 					'type'  => 'text',
-					'label' => __( 'Widget Subtitle', 'fi_print' )
+					'label' => __( 'Widget Subtitle', 'fi-print' )
 				),
 
 			)
@@ -29,4 +29,4 @@ class Fi_Print_Point_Features_Widget extends SiteOrigin_Widget {
 	}
 
 }
-siteorigin_widget_register('fi_print-point_features', __FILE__,'Fi_Print_Point_Features_Widget');
+siteorigin_widget_register('fi-print-point_features', __FILE__,'Fi_Print_Point_Features_Widget');

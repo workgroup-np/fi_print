@@ -27,7 +27,7 @@ global $post; $author_id=$post->post_author;?>
           <h5 class="card-title"><a href="<?php the_permalink(); ?>" title=""><?php the_title(); ?></a></h5>
           <time datetime="<?php the_time();?>"><?php the_time('jS F, Y') ?></time>
           <p class="card-text"><?php echo the_excerpt();?></p>
-          <a class="btn btn-primary-link" href="<?php the_permalink(); ?>"><?php _e('Continue reading ', 'fi_print'); ?><i class="fa fa-angle-right"></i></a>
+          <a class="btn btn-primary-link" href="<?php the_permalink(); ?>"><?php _e('Continue reading ', 'fi-print'); ?><i class="fa fa-angle-right"></i></a>
 		</div>
 	</div>
 </div>

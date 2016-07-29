@@ -3,10 +3,10 @@
 class Fi_Print_Spacer_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'fi_print-spacer',
-			__( 'Fi Print: Spacer', 'fi_print' ),
+			'fi-print-spacer',
+			__( 'Fi Print: Spacer', 'fi-print' ),
 			array(
-				'description' => __('Fi Print Spacer', 'fi_print' ),
+				'description' => __('Fi Print Spacer', 'fi-print' ),
 
 				),
 			array(),
@@ -14,7 +14,7 @@ class Fi_Print_Spacer_Widget extends SiteOrigin_Widget {
 
 				'space' => array(
 					'type'  => 'text',
-					'label' => __( 'Enter the value without px', 'fi_print' )
+					'label' => __( 'Enter the value without px', 'fi-print' )
 				),
 				
 
@@ -26,4 +26,4 @@ class Fi_Print_Spacer_Widget extends SiteOrigin_Widget {
 	}
 
 }
-siteorigin_widget_register('fi_print-spacer', __FILE__,'Fi_Print_spacer_Widget');
+siteorigin_widget_register('fi-print-spacer', __FILE__,'Fi_Print_spacer_Widget');
