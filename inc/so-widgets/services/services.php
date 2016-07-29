@@ -3,10 +3,10 @@
 class Fi_Print_Services_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'fi_print-services',
-			__( 'Fi Print: Services', 'fi_print' ),
+			'fi-print-services',
+			__( 'Fi Print: Services', 'fi-print' ),
 			array(
-				'description' => __('Fi Print Services', 'fi_print' ),
+				'description' => __('Fi Print Services', 'fi-print' ),
 
 				),
 			array(),
@@ -14,19 +14,19 @@ class Fi_Print_Services_Widget extends SiteOrigin_Widget {
 
 				'services_repeater' => array(
 					'type'  => 'repeater',
-					'label' => __('Services Details.', 'fi_print'),
+					'label' => __('Services Details.', 'fi-print'),
 					'fields' => array(
 						'image' => array(
 							'type'  => 'media',
-							'label' => __( 'Select Services Image', 'fi_print' )
+							'label' => __( 'Select Services Image', 'fi-print' )
 						),
 						'title' => array(
 							'type'  => 'text',
-							'label' => __( 'Services Title', 'fi_print' )
+							'label' => __( 'Services Title', 'fi-print' )
 						),
 						'sub_title' => array(
 							'type'  => 'text',
-							'label' => __( 'Services Subtitle', 'fi_print' )
+							'label' => __( 'Services Subtitle', 'fi-print' )
 						),
 
 					),
@@ -40,4 +40,4 @@ class Fi_Print_Services_Widget extends SiteOrigin_Widget {
 	}
 
 }
-siteorigin_widget_register('fi_print-services', __FILE__,'Fi_Print_Services_Widget');
+siteorigin_widget_register('fi-print-services', __FILE__,'Fi_Print_Services_Widget');

@@ -3,16 +3,16 @@
 class Fi_Print_Hero_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'fi_print-hero',
-			__( 'Fi Print: Hero', 'fi_print' ),
+			'fi-print-hero',
+			__( 'Fi Print: Hero', 'fi-print' ),
 			array(
-				'description' => __('Simple Hero Widget', 'fi_print' ),
+				'description' => __('Simple Hero Widget', 'fi-print' ),
 				),
 			array(),
 			array(
 						'image' => array(
 							'type'  => 'media',
-							'label' => __( 'Select Hero Image', 'fi_print' )
+							'label' => __( 'Select Hero Image', 'fi-print' )
 					),
 
 					'content' => array(
@@ -28,4 +28,4 @@ class Fi_Print_Hero_Widget extends SiteOrigin_Widget {
 	}
 
 }
-siteorigin_widget_register('fi_print-hero', __FILE__,'Fi_Print_Hero_Widget');
+siteorigin_widget_register('fi-print-hero', __FILE__,'Fi_Print_Hero_Widget');

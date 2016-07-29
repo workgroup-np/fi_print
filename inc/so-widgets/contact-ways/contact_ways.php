@@ -3,10 +3,10 @@
 class Fi_Print_Contact_Ways_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'fi_print-contact-ways',
-			__( 'Fi_Print: Contact Ways', 'fi_print' ),
+			'fi-print-contact-ways',
+			__( 'Fi_Print: Contact Ways', 'fi-print' ),
 			array(
-				'description' => __('Contact Ways for your company', 'fi_print' ),
+				'description' => __('Contact Ways for your company', 'fi-print' ),
 
 				),
 			array(),
@@ -14,25 +14,25 @@ class Fi_Print_Contact_Ways_Widget extends SiteOrigin_Widget {
 
 				'contact_ways_repeater' => array(
 					'type'  => 'repeater',
-					'label' => __('Enter Contact Details.', 'fi_print'),
+					'label' => __('Enter Contact Details.', 'fi-print'),
 					'fields' => array(
 						'title' => array(
 							'type'  => 'text',
-							'label' => __( 'Title', 'fi_print' )
+							'label' => __( 'Title', 'fi-print' )
 						),
 						'content' => array(
 							'type'  => 'text',
-							'label' => __( 'Content', 'fi_print' )
+							'label' => __( 'Content', 'fi-print' )
 						),
 					),
 				),
 				'get_quote_text'=>  array(
 					'type'  => 'text',
-					'label' => __( 'Get a quote TEXT', 'fi_print' ),
+					'label' => __( 'Get a quote TEXT', 'fi-print' ),
 				),
 				'get_quote_link'=>  array(
 					'type'  => 'link',
-					'label' => __( 'Get a quote Link', 'fi_print' ),
+					'label' => __( 'Get a quote Link', 'fi-print' ),
 				),
 
 
@@ -45,4 +45,4 @@ class Fi_Print_Contact_Ways_Widget extends SiteOrigin_Widget {
 	}
 
 }
-siteorigin_widget_register('fi_print-contact-ways', __FILE__,'Fi_Print_Contact_Ways_Widget');
+siteorigin_widget_register('fi-print-contact-ways', __FILE__,'Fi_Print_Contact_Ways_Widget');

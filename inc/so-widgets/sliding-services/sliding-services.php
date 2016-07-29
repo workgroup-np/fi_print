@@ -3,46 +3,46 @@
 class Fi_Print_Sliding_Services_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'fi_print-sliding-services',
-			__( 'Fi Print: Sliding Services', 'fi_print' ),
+			'fi-print-sliding-services',
+			__( 'Fi Print: Sliding Services', 'fi-print' ),
 			array(
-				'description' => __('Fi Print Sliding Services', 'fi_print' ),
+				'description' => __('Fi Print Sliding Services', 'fi-print' ),
 
 				),
 			array(),
 			array(
 				'primary_title' => array(
 					'type'  => 'text',
-					'label' => __( 'Widget Title', 'fi_print' ),
+					'label' => __( 'Widget Title', 'fi-print' ),
 				),
 
 				'title_content' => array(
 					'type'  => 'text',
-					'label' => __( 'Widget Sub Title', 'fi_print' ),
+					'label' => __( 'Widget Sub Title', 'fi-print' ),
 				),
 				'sliding-services_repeater' => array(
 					'type'  => 'repeater',
-					'label' => __('Sliding Services Details.', 'fi_print'),
+					'label' => __('Sliding Services Details.', 'fi-print'),
 					'fields' => array(
 						'image' => array(
 							'type'  => 'media',
-							'label' => __( 'Select Sliding Services Image', 'fi_print' )
+							'label' => __( 'Select Sliding Services Image', 'fi-print' )
 						),
 						'title' => array(
 							'type'  => 'text',
-							'label' => __( 'Sliding Services Title', 'fi_print' )
+							'label' => __( 'Sliding Services Title', 'fi-print' )
 						),
 						'sub_title' => array(
 							'type'  => 'text',
-							'label' => __( 'Sliding Services Subtitle', 'fi_print' )
+							'label' => __( 'Sliding Services Subtitle', 'fi-print' )
 						),
 						'read_more_text' => array(
 							'type'  => 'text',
-							'label' => __( 'Read More Text', 'fi_print' )
+							'label' => __( 'Read More Text', 'fi-print' )
 						),
 						'read_more_link' => array(
 							'type'  => 'text',
-							'label' => __( 'Read More Link', 'fi_print' )
+							'label' => __( 'Read More Link', 'fi-print' )
 						),
 
 
@@ -57,4 +57,4 @@ class Fi_Print_Sliding_Services_Widget extends SiteOrigin_Widget {
 	}
 
 }
-siteorigin_widget_register('fi_print-sliding-services', __FILE__,'Fi_Print_Sliding_Services_Widget');
+siteorigin_widget_register('fi-print-sliding-services', __FILE__,'Fi_Print_Sliding_Services_Widget');

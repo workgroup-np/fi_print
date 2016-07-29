@@ -3,46 +3,46 @@
 class Fi_Print_Title_Subtitle_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'fi_print-title-subtitle',
-			__( 'Fi_Print: Title', 'fi_print' ),
+			'fi-print-title-subtitle',
+			__( 'Fi_Print: Title', 'fi-print' ),
 			array(
-				'description' => __( 'A simple title and subtitle widget.', 'fi_print' ),
+				'description' => __( 'A simple title and subtitle widget.', 'fi-print' ),
 			),
 			array(),
 			array(
 				'primary_title' => array(
 					'type'  => 'text',
-					'label' => __( 'Primary Title', 'fi_print' ),
+					'label' => __( 'Primary Title', 'fi-print' ),
 				),
 
 				'secondary_title' => array(
 					'type'  => 'text',
-					'label' => __( 'Secondary Title', 'fi_print' ),
+					'label' => __( 'Secondary Title', 'fi-print' ),
 				),
 
 				'title_content' => array(
 					'type'  => 'textarea',
-					'label' => __( 'Sub Title', 'fi_print' ),
+					'label' => __( 'Sub Title', 'fi-print' ),
 				),
 
 				'settings' => array(
 					'type'   => 'section',
-					'label'  => __( 'Color Settings', 'fi_print' ),
+					'label'  => __( 'Color Settings', 'fi-print' ),
 					'hide' => true,
 					'fields' => array(
 						'color_primary_title' => array(
 							'type'    => 'color',
-							'label'   => __( 'Primary Title Color', 'fi_print' ),
+							'label'   => __( 'Primary Title Color', 'fi-print' ),
 							'default' => '#fff',
 						),
 						'color_secondary_title' => array(
 							'type'    => 'color',
-							'label'   => __( 'Secondary Title Color', 'fi_print' ),
+							'label'   => __( 'Secondary Title Color', 'fi-print' ),
 							'default' => '#fff',
 						),
 						'color_title_content' => array(
 							'type'    => 'color',
-							'label'   => __( 'Content Color', 'fi_print' ),
+							'label'   => __( 'Content Color', 'fi-print' ),
 							'default' => '#fff',
 						),
 	    			),
@@ -54,7 +54,7 @@ class Fi_Print_Title_Subtitle_Widget extends SiteOrigin_Widget {
 
 	function get_style_name( $instance ) {
 
-		return 'fi_print-title';
+		return 'fi-print-title';
 	}
 
 	function get_less_variables( $instance ) {
@@ -77,4 +77,4 @@ class Fi_Print_Title_Subtitle_Widget extends SiteOrigin_Widget {
 	}
 }
 
-siteorigin_widget_register( 'fi_print-title-subtitle', __FILE__, 'Fi_Print_Title_Subtitle_Widget' );
+siteorigin_widget_register( 'fi-print-title-subtitle', __FILE__, 'Fi_Print_Title_Subtitle_Widget' );

@@ -3,10 +3,10 @@
 class Fi_Print_Counter_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'fi_print-counter',
-			__( 'Fi Print: Counter', 'fi_print' ),
+			'fi-print-counter',
+			__( 'Fi Print: Counter', 'fi-print' ),
 			array(
-				'description' => __('Fi Print Counter', 'fi_print' ),
+				'description' => __('Fi Print Counter', 'fi-print' ),
 
 				),
 			array(),
@@ -14,23 +14,23 @@ class Fi_Print_Counter_Widget extends SiteOrigin_Widget {
 
 				'counter_repeater' => array(
 					'type'  => 'repeater',
-					'label' => __('Counter Details.', 'fi_print'),
+					'label' => __('Counter Details.', 'fi-print'),
 					'fields' => array(
 
 						'counter_title'=>  array(
 							'type'  => 'text',
-							'label' => __( 'Counter Title', 'fi_print' )
+							'label' => __( 'Counter Title', 'fi-print' )
 						),
 
 						'counter_percent'=>  array(
 							'type'  => 'text',
-							'label' => __( 'Counter Number', 'fi_print' )
+							'label' => __( 'Counter Number', 'fi-print' )
 
 						),
 						'suffix_text'=>  array(
 							'type'  => 'text',
-							'label' => __( 'Text', 'fi_print' ),
-							'description' => __( 'Text to append after the counter number.eg %', 'fi_print' )
+							'label' => __( 'Text', 'fi-print' ),
+							'description' => __( 'Text to append after the counter number.eg %', 'fi-print' )
 						),
 						
 					),
@@ -44,4 +44,4 @@ class Fi_Print_Counter_Widget extends SiteOrigin_Widget {
 	}
 
 }
-siteorigin_widget_register('fi_print-counter', __FILE__,'Fi_Print_Counter_Widget');
+siteorigin_widget_register('fi-print-counter', __FILE__,'Fi_Print_Counter_Widget');

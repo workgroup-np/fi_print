@@ -3,10 +3,10 @@
 class Fi_Print_Slider_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'fi_print-slider',
-			__( 'Fi Print: Slider', 'fi_print' ),
+			'fi-print-slider',
+			__( 'Fi Print: Slider', 'fi-print' ),
 			array(
-				'description' => __('Fi Print Slider', 'fi_print' ),
+				'description' => __('Fi Print Slider', 'fi-print' ),
 
 				),
 			array(),
@@ -14,7 +14,7 @@ class Fi_Print_Slider_Widget extends SiteOrigin_Widget {
 
 				'slider_repeater' => array(
 					'type'  => 'repeater',
-					'label' => __('Slider Details.', 'fi_print'),
+					'label' => __('Slider Details.', 'fi-print'),
 					'item_name' => __('Frame', 'so-widgets-bundle'),
 					'item_label' => array(
 						'selector' => "[id*='frames-url']",
@@ -24,7 +24,7 @@ class Fi_Print_Slider_Widget extends SiteOrigin_Widget {
 					'fields' => array(
 						'image' => array(
 							'type'  => 'media',
-							'label' => __( 'Select Slider Image', 'fi_print' )
+							'label' => __( 'Select Slider Image', 'fi-print' )
 					),
 
 					'content' => array(
@@ -61,4 +61,4 @@ class Fi_Print_Slider_Widget extends SiteOrigin_Widget {
 	}
 
 }
-siteorigin_widget_register('fi_print-slider', __FILE__,'Fi_Print_Slider_Widget');
+siteorigin_widget_register('fi-print-slider', __FILE__,'Fi_Print_Slider_Widget');

@@ -33,7 +33,7 @@
 						<time datetime="<?php echo $post->post_date;?>"><?php echo esc_attr( $formatted_post_date ); ?></time>
 						<h5 class="card-title"><a href="<?php the_permalink(); ?>"> <?php the_title() ?></a></h5>
 						<p class="card-text"><?php echo wp_trim_words( get_the_content(), 10, '...' );?></p>
-						<a class="btn btn-primary-link" href="<?php the_permalink() ?>"><?php _e( 'Continue reading', 'fi_print' ) ?><i class="fa fa-angle-right"></i></a>
+						<a class="btn btn-primary-link" href="<?php the_permalink() ?>"><?php _e( 'Continue reading', 'fi-print' ) ?><i class="fa fa-angle-right"></i></a>
 					</div>
 				</div>
 			</div>
@@ -86,7 +86,7 @@
 							<h5 class="card-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
 							<time datetime="<?php echo $post->post_date;?>"><?php echo esc_attr( $formatted_post_date ); ?></time>
 							<p class="card-text"><?php echo wp_trim_words( get_the_content(), 10, '...' );?></p>
-							<a class="btn btn-primary-link" href="<?php the_permalink() ?>"><?php _e( 'Continue reading', 'fi_print' ) ?><i class="fa fa-angle-right"></i></a>
+							<a class="btn btn-primary-link" href="<?php the_permalink() ?>"><?php _e( 'Continue reading', 'fi-print' ) ?><i class="fa fa-angle-right"></i></a>
 						</div>
 					</div>
 				</div>

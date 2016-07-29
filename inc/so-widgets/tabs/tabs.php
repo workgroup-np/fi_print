@@ -3,10 +3,10 @@
 class Fi_Print_Tabs_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'fi_print-tabs',
-			__( 'Fi Print: Tabs', 'fi_print' ),
+			'fi-print-tabs',
+			__( 'Fi Print: Tabs', 'fi-print' ),
 			array(
-				'description' => __('Fi Print Tabs', 'fi_print' ),
+				'description' => __('Fi Print Tabs', 'fi-print' ),
 
 				),
 			array(),
@@ -14,7 +14,7 @@ class Fi_Print_Tabs_Widget extends SiteOrigin_Widget {
 
 				'tabs_repeater' => array(
 					'type'  => 'repeater',
-					'label' => __('Tabs Details.', 'fi_print'),
+					'label' => __('Tabs Details.', 'fi-print'),
 					'item_label' => array(
 			            'selector'     => "[id*='title']",
 			            'update_event' => 'change',
@@ -23,11 +23,11 @@ class Fi_Print_Tabs_Widget extends SiteOrigin_Widget {
 					'fields' => array(
 						'title' => array(
 							'type'  => 'text',
-							'label' => __( 'Tab Title', 'fi_print' )
+							'label' => __( 'Tab Title', 'fi-print' )
 						),
 						'textarea' => array(
 							'type' => 'tinymce',
-					        'label' => __( 'Description', 'fi_print' ),
+					        'label' => __( 'Description', 'fi-print' ),
 					        'rows' => 10,
 					        'default_editor' => 'html',
 					        'button_filters' => array(
@@ -40,7 +40,7 @@ class Fi_Print_Tabs_Widget extends SiteOrigin_Widget {
 						),	
 						'active' => array(
 							'type'  => 'checkbox',
-							'label' => __( 'Active Tab?', 'fi_print' )
+							'label' => __( 'Active Tab?', 'fi-print' )
 						),				
 
 					),
@@ -54,4 +54,4 @@ class Fi_Print_Tabs_Widget extends SiteOrigin_Widget {
 	}
 
 }
-siteorigin_widget_register('fi_print-tabs', __FILE__,'Fi_Print_Tabs_Widget');
+siteorigin_widget_register('fi-print-tabs', __FILE__,'Fi_Print_Tabs_Widget');

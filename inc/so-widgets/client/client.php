@@ -3,10 +3,10 @@
 class Fi_Print_Client_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'fi_print-client',
-			__( 'Fi Print: Client', 'fi_print' ),
+			'fi-print-client',
+			__( 'Fi Print: Client', 'fi-print' ),
 			array(
-				'description' => __('Display Client Logos', 'fi_print' ),
+				'description' => __('Display Client Logos', 'fi-print' ),
 
 				),
 			array(),
@@ -14,12 +14,12 @@ class Fi_Print_Client_Widget extends SiteOrigin_Widget {
 
 				'client_repeater' => array(
 					'type'  => 'repeater',
-					'label' => __('Client Details.', 'fi_print'),
+					'label' => __('Client Details.', 'fi-print'),
 					'fields' => array(
 
 						'client_title'=>  array(
 							'type'  => 'media',
-							'label' => __( 'Client Image', 'fi_print' )
+							'label' => __( 'Client Image', 'fi-print' )
 						),
 						
 					),
@@ -33,4 +33,4 @@ class Fi_Print_Client_Widget extends SiteOrigin_Widget {
 	}
 
 }
-siteorigin_widget_register('fi_print-client', __FILE__,'Fi_Print_Client_Widget');
+siteorigin_widget_register('fi-print-client', __FILE__,'Fi_Print_Client_Widget');

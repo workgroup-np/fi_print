@@ -3,10 +3,10 @@
 class Fi_Print_Latest_Post_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
-			'fi_print-latest-post',
-			__( 'Fi Print: Latest_Post', 'fi_print' ),
+			'fi-print-latest-post',
+			__( 'Fi Print: Latest_Post', 'fi-print' ),
 			array(
-				'description' => __('Display Latest Post', 'fi_print' ),
+				'description' => __('Display Latest Post', 'fi-print' ),
 
 				),
 			array(),
@@ -14,25 +14,25 @@ class Fi_Print_Latest_Post_Widget extends SiteOrigin_Widget {
 
 				'title' => array(
 					'type'  => 'text',
-					'label' => __( 'widget Title', 'fi_print' )
+					'label' => __( 'widget Title', 'fi-print' )
 				),
 				'sub_title' => array(
 					'type'  => 'text',
-					'label' => __( 'Widget Subtitle', 'fi_print' )
+					'label' => __( 'Widget Subtitle', 'fi-print' )
 				),
 				
 				'post_number'=> array(
 					'type'  => 'text',
-					'label' => __( 'Post Number', 'fi_print' )
+					'label' => __( 'Post Number', 'fi-print' )
 
 				),
 				'post_style' => array(
 					'type'     => 'select',
-					'label'    => __( 'Post  Style', 'fi_print' ),
+					'label'    => __( 'Post  Style', 'fi-print' ),
 					'default'  => 'one',
 					'options'  => array(
-						'one' => __( 'Style One', 'fi_print' ),
-						'two'  => __( 'Style Two', 'fi_print' ),
+						'one' => __( 'Style One', 'fi-print' ),
+						'two'  => __( 'Style Two', 'fi-print' ),
 					),
 				),
 
@@ -45,4 +45,4 @@ class Fi_Print_Latest_Post_Widget extends SiteOrigin_Widget {
 	}
 
 }
-siteorigin_widget_register('fi_print-latest-post', __FILE__,'Fi_Print_Latest_Post_Widget');
+siteorigin_widget_register('fi-print-latest-post', __FILE__,'Fi_Print_Latest_Post_Widget');
