@@ -20,9 +20,9 @@ if ( ! function_exists( 'fi_print_setup' ) ) :
 				 * Make theme available for translation.
 				 * Translations can be filed in the /languages/ directory.
 				 * If you're building a theme based on Fi_Print, use a find and replace
-				 * to change 'fi_print' to the name of your theme in all the template files.
+				 * to change 'fi-print' to the name of your theme in all the template files.
 				 */
-				load_theme_textdomain( 'fi_print', get_template_directory() . '/languages' );
+				load_theme_textdomain( 'fi-print', get_template_directory() . '/languages' );
 
 				// Add default posts and comments RSS feed links to head.
 				add_theme_support( 'automatic-feed-links' );
@@ -41,11 +41,11 @@ if ( ! function_exists( 'fi_print_setup' ) ) :
 				 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 				 */
 				add_theme_support( 'post-thumbnails' );
-				add_image_size( 'fi_print-post-thumb', 255, 258 );
+				add_image_size( 'fi-print-post-thumb', 255, 258 );
 
 				// This theme uses wp_nav_menu() in four location.
 				register_nav_menus( array(
-						'primary'  => esc_html__( 'Primary Menu', 'fi_print' ),
+						'primary'  => esc_html__( 'Primary Menu', 'fi-print' ),
 				) );
 
 				/*
@@ -116,25 +116,25 @@ add_action( 'after_setup_theme', 'fi_print_content_width', 0 );
  */
 function fi_print_widgets_init() {
 		register_sidebar( array(
-				'name'          => esc_html__( 'Primary Sidebar', 'fi_print' ),
+				'name'          => esc_html__( 'Primary Sidebar', 'fi-print' ),
 				'id'            => 'sidebar-1',
-				'description'   => esc_html__( 'Add widgets here to appear in your Primary Sidebar.', 'fi_print' ),
+				'description'   => esc_html__( 'Add widgets here to appear in your Primary Sidebar.', 'fi-print' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h2 class="widget-title">',
 				'after_title'   => '</h2>',
 		) );
 		register_sidebar( array(
-				'name'          => esc_html__( 'Secondary Sidebar', 'fi_print' ),
+				'name'          => esc_html__( 'Secondary Sidebar', 'fi-print' ),
 				'id'            => 'sidebar-2',
-				'description'   => esc_html__( 'Add widgets here to appear in your Secondary Sidebar.', 'fi_print' ),
+				'description'   => esc_html__( 'Add widgets here to appear in your Secondary Sidebar.', 'fi-print' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h2 class="widget-title">',
 				'after_title'   => '</h2>',
 		) );
 		register_sidebar( array(
-				'name'          => sprintf( __( 'Extra Sidebar %d', 'fi_print' ), 1 ),
+				'name'          => sprintf( __( 'Extra Sidebar %d', 'fi-print' ), 1 ),
 				'id'            => 'extra-sidebar-1',
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
@@ -142,7 +142,7 @@ function fi_print_widgets_init() {
 				'after_title'   => '</h2>',
 		) );
 		register_sidebar( array(
-				'name'          => sprintf( __( 'Extra Sidebar %d', 'fi_print' ), 2 ),
+				'name'          => sprintf( __( 'Extra Sidebar %d', 'fi-print' ), 2 ),
 				'id'            => 'extra-sidebar-2',
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
@@ -150,7 +150,7 @@ function fi_print_widgets_init() {
 				'after_title'   => '</h2>',
 		) );
 		register_sidebar( array(
-				'name'          => sprintf( __( 'Extra Sidebar %d', 'fi_print' ), 3 ),
+				'name'          => sprintf( __( 'Extra Sidebar %d', 'fi-print' ), 3 ),
 				'id'            => 'extra-sidebar-3',
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
@@ -158,7 +158,7 @@ function fi_print_widgets_init() {
 				'after_title'   => '</h2>',
 		) );
 		register_sidebar( array(
-				'name'          => sprintf( __( 'Extra Sidebar %d', 'fi_print' ), 4 ),
+				'name'          => sprintf( __( 'Extra Sidebar %d', 'fi-print' ), 4 ),
 				'id'            => 'extra-sidebar-4',
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
@@ -184,8 +184,8 @@ function fi_print_scripts() {
 		wp_enqueue_script( 'fi-print-custom', get_template_directory_uri().'/assets/js/custom.js', array('jquery'), '1.0.0', TRUE);
 
 		wp_localize_script( 'fi_print-custom', 'Fi_Print_Screen_Reader_Text', array(
-				'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'fi_print' ) . '</span>',
-				'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'fi_print' ) . '</span>',
+				'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'fi-print' ) . '</span>',
+				'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'fi-print' ) . '</span>',
 		) );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -247,7 +247,7 @@ add_filter('nav_menu_css_class' , 'fi_print_special_nav_class' , 10 , 2);
  */
 require get_template_directory() . '/inc/init.php';
 require get_template_directory() . '/inc/aquaresizer.php';
-require get_template_directory() . '/inc/meta-box.php';
+require get_template_directory() . '/inc/meta-box.php'	;
 require get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 require get_template_directory() . '/inc/hook/tgm.php';
 
@@ -257,30 +257,30 @@ if ( ! function_exists( 'fi_print_row_style_fields' ) ) {
 	function fi_print_row_style_fields($fields) {
 
 			$fields['row_stretch'] = array(
-						'name'        => __('', 'siteorigin-panels'),
+						'name'        => __('', 'fi-print'),
 						'type'        => 'hidden',
 						'group'       => 'layout',   
 						
 			);
 
 			$fields['row_container'] = array(
-						'name'        => __('Row Styles', 'siteorigin-panels'),
+						'name'        => __('Row Styles', 'fi-print'),
 						'type'        => 'select',
 						'group'       => 'layout',
-						'description' => __('Choose between contained or full row stle', 'siteorigin-panels'),
+						'description' => __('Choose between contained or full row stle', 'fi-print'),
 						'priority'    => 10,
 						'options'     => array(
-									'container'        => __('Container', 'siteorigin-panels'),
-									'container-row'        => __('Container with row', 'siteorigin-panels'),
-									'full-width'        => __('Full-Width', 'siteorigin-panels'),
+									'container'        => __('Container', 'fi-print'),
+									'container-row'        => __('Container with row', 'fi-print'),
+									'full-width'        => __('Full-Width', 'fi-print'),
 									
 									),
 			);
 			$fields['overlay'] = array(
-						'name'        => __('Overlay', 'siteorigin-panels'),
+						'name'        => __('Overlay', 'fi-print'),
 						'type'        => 'checkbox',
 						'group'       => 'design',
-						'description' => __('If enabled, the background image will have a overlay/dark effect.', 'siteorigin-panels'),
+						'description' => __('If enabled, the background image will have a overlay/dark effect.', 'fi-print'),
 						'priority'    => 10,
 			);
 		return $fields;
@@ -331,10 +331,10 @@ function fi_print_row_style_attributes( $attributes, $args ) {
 add_filter('siteorigin_panels_row_style_attributes', 'fi_print_row_style_attributes', 10, 2);
 function custom_row_style_fields($fields) {
 	$fields['inner'] = array(
-			'name'        => __('Inner Container', 'siteorigin-panels'),
+			'name'        => __('Inner Container', 'fi-print'),
 			'type'        => 'checkbox',
 			'group'       => 'layout',
-			'description' => __('Add inner class to container', 'siteorigin-panels'),
+			'description' => __('Add inner class to container', 'fi-print'),
 			'priority'    => 4,
 	);
 

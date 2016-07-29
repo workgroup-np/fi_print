@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {echo '<h1>Forbidden</h1>'; exit();} ?>
       $my_query = new wp_query( $args );
 if( $my_query->have_posts() ) :?>
   <div class="similar-posts">
-    <h2><?php _e('Similar Posts','fi_print');?></h2>
+    <h2><?php _e('Similar Posts','fi-print');?></h2>
       <div class="row">
         <?php while( $my_query->have_posts() )  :$my_query->the_post(); ?>
           <div class="similar-item col-md-6">
@@ -27,7 +27,7 @@ if( $my_query->have_posts() ) :?>
                 ?><img src="<?php echo esc_url($n_img);?>" class="img-responsive"/>
             </a>
             <h6><a href="<?php the_permalink(); ?>"><?php fi_print_post_title();?></a></h6>
-            <span><?php echo get_the_date('d  F  Y') ?> <?php _e('/','fi_print'); ?>   <?php if (get_the_category()) : ?><?php the_category(',');endif; ?></span>
+            <span><?php echo get_the_date('d  F  Y') ?> <?php _e('/','fi-print'); ?>   <?php if (get_the_category()) : ?><?php the_category(',');endif; ?></span>
           </div>
         <?php endwhile;?>
     </div>

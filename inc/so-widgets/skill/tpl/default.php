@@ -1,5 +1,5 @@
 <?php $image_url = wp_get_attachment_image_src( $instance['image'], 'full');
-if( !empty($image_url) ) echo '<section><div class="card card-imagely" style="background-image: url('.esc_attr($image_url[0]).')">';?>
+if( !empty($image_url) ) echo '<div class="card card-imagely" style="background-image: url('.esc_attr($image_url[0]).')">';?>
     <?php if( !empty($instance['title']) ) echo '<h6>'.esc_attr($instance['title']).'</h6>';
          if( !empty($instance['sub_title']) )  echo '<p>'.esc_attr($instance['sub_title']).'</p><br>'; 
 
@@ -20,5 +20,5 @@ if( !empty($image_url) ) echo '<section><div class="card card-imagely" style="ba
                 <?php endif; ?>    
             </div>
     <?php }
-if( !empty($image_url) ) echo '</div></section>';?>
+if( !empty($image_url) ) echo '</div>';?>
 

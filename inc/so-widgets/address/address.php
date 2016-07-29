@@ -4,9 +4,9 @@ class Fi_Print_Address_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
 			'fi-print-address',
-			__( 'Fi_Print: Address', 'siteorigin-widgets' ),
+			__( 'Fi_Print: Address', 'fi-print' ),
 			array(
-				'description' => __('Displays an contact address details', 'siteorigin-widgets' ),
+				'description' => __('Displays an contact address details', 'fi-print' ),
 
 				),
 			array(),
@@ -14,7 +14,7 @@ class Fi_Print_Address_Widget extends SiteOrigin_Widget {
 
 				'title' => array(
 					'type' => 'text',
-					'label' => __('Tilte', 'siteorigin-widgets'),
+					'label' => __('Tilte', 'fi-print'),
 				),
 
 				'sub_title' => array(

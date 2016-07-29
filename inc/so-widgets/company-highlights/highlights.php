@@ -4,9 +4,9 @@ class Fi_Print_Company_Highlights_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
 			'fi-print-company-highlights',
-			__( 'Fi_Print: Company Highlights', 'siteorigin-widgets' ),
+			__( 'Fi_Print: Company Highlights', 'fi-print' ),
 			array(
-				'description' => __('Displays an company-highlights details', 'siteorigin-widgets' ),
+				'description' => __('Displays an company-highlights details', 'fi-print' ),
 
 				),
 			array(),

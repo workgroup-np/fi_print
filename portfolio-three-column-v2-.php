@@ -19,7 +19,7 @@ $h='345';
             );
             $categories = get_categories( $arguments );?>
             <div id="projects-filter" class="shuffle-filter">
-                <a href="#"  class="active" data-group="all"><?php _e( 'All', 'fi_print' ); ?></a>
+                <a href="#"  class="active" data-group="all"><?php _e( 'All', 'fi-print' ); ?></a>
                 <?php foreach($categories as $i=>$category) { ?>
                 <a data-group="<?php echo $category->slug; ?>" href="#"><?php echo $category->name; ?></a>
                 <?php } ?>

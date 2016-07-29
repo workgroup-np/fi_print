@@ -255,10 +255,10 @@ class cmb_Meta_Box {
 			   wp_register_script( 'iris', admin_url( 'js/iris.min.js' ), array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ), self::CMB_VERSION );
 		   	wp_register_script( 'wp-color-picker', admin_url( 'js/color-picker.min.js' ), array( 'iris' ), self::CMB_VERSION );
 				wp_localize_script( 'wp-color-picker', 'wpColorPickerL10n', array(
-					'clear'         => __( 'Clear','fi_print' ),
-					'defaultString' => __( 'Default','fi_print' ),
-					'pick'          => __( 'Select Color','fi_print' ),
-					'current'       => __( 'Current Color','fi_print' ),
+					'clear'         => __( 'Clear','fi-print' ),
+					'defaultString' => __( 'Default','fi-print' ),
+					'pick'          => __( 'Select Color','fi-print' ),
+					'current'       => __( 'Current Color','fi-print' ),
 				) );
 			}
 		} else {
@@ -268,7 +268,7 @@ class cmb_Meta_Box {
 		}
 		wp_register_script( 'cmb-datepicker', CMB_META_BOX_URL . 'js/jquery.datePicker.min.js' );
 		wp_register_script( 'cmb-timepicker', CMB_META_BOX_URL . 'js/jquery.timePicker.min.js' );
-		wp_register_script( 'cmb-scripts', CMB_META_BOX_URL .'js/cmb'. $min .'.js', $scripts, self::CMB_VERSION );
+		wp_register_script( 'cmb-scripts', CMB_META_BOX_URL .'js/fi-print'. $min .'.js', $scripts, self::CMB_VERSION );
 
 		wp_enqueue_media();
 
@@ -285,7 +285,7 @@ class cmb_Meta_Box {
 			'ajaxurl'         => admin_url( '/admin-ajax.php' ),
 			'up_arrow'        => '[ ↑ ]&nbsp;',
 			'down_arrow'      => '&nbsp;[ ↓ ]',
-			'check_toggle'    => __( 'Select / Deselect All', 'cmb' ),
+			'check_toggle'    => __( 'Select / Deselect All', 'fi-print' ),
 		) ) );
 
 		wp_register_style( 'cmb-styles', CMB_META_BOX_URL . 'style'. $min .'.css', $styles );
@@ -1160,7 +1160,7 @@ function cmb_metabox_form( $meta_box, $object_id, $echo = true ) {
 	// @todo more hardening?
 	if (
 		// check nonce
-		isset( $_POST['submit-cmb'], $_POST['object_id'], $_POST['wp_meta_box_nonce'] )
+		isset( $_POST['submit-fi-print'], $_POST['object_id'], $_POST['wp_meta_box_nonce'] )
 		&& wp_verify_nonce( $_POST['wp_meta_box_nonce'], cmb_Meta_Box::nonce() )
 		&& $_POST['object_id'] == $object_id
 	)
@@ -1176,7 +1176,7 @@ function cmb_metabox_form( $meta_box, $object_id, $echo = true ) {
 
 	$form_format = apply_filters( 'cmb_frontend_form_format', '<form class="cmb-form" method="post" id="%s" enctype="multipart/form-data" encoding="multipart/form-data"><input type="hidden" name="object_id" value="%s">%s<input type="submit" name="submit-cmb" value="%s" class="button-primary"></form>', $object_id, $meta_box, $form );
 
-	$form = sprintf( $form_format, $meta_box['id'], $object_id, $form, __( 'Save','fi_print' ) );
+	$form = sprintf( $form_format, $meta_box['id'], $object_id, $form, __( 'Save','fi-print' ) );
 
 	if ( $echo )
 		echo $form;

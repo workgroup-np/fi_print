@@ -169,9 +169,9 @@ function fi_print_pagination ($before = '', $after = '') {
             $var=$paged;
 
             if($paged!=$start_page)
-                echo ( '<li><a href="'.get_pagenum_link(--$var).'" >'.__('Previous','fi_print').'</a></li>' );
+                echo ( '<li><a href="'.get_pagenum_link(--$var).'" >'.__('Previous','fi-print').'</a></li>' );
             else
-                echo ( '<li class="disabled"><a href="#">'.__('Previous','fi_print').'</a></li>' );
+                echo ( '<li class="disabled"><a href="#">'.__('Previous','fi-print').'</a></li>' );
             for ($i = $start_page; $i <= $end_page; $i++) {
 
                 if ($i == $paged)
@@ -183,35 +183,35 @@ function fi_print_pagination ($before = '', $after = '') {
             $var2=$paged;
             if($paged==$end_page)
 
-                echo ( '&nbsp;<li class="disabled"><a href="#">'.__('Next','fi_print').'</a></li>' );
+                echo ( '&nbsp;<li class="disabled"><a href="#">'.__('Next','fi-print').'</a></li>' );
             else
-                echo ( '&nbsp;<li><a href="'.get_pagenum_link(++$var2).'">'.__('Next','fi_print').'</a></li>' );
+                echo ( '&nbsp;<li><a href="'.get_pagenum_link(++$var2).'">'.__('Next','fi-print').'</a></li>' );
 
             echo '</ul>';
     echo $after;
     return;
 }
 function fi_print_add_custom_user_profile_fields( $user ) {
-?>          <h3><?php _e('Personal Address','fi_print');?></h3>
+?>          <h3><?php _e('Personal Address','fi-print');?></h3>
           <table class="form-table">
             <tr>
-                <th> <label for="address"><?php _e('Facebook', 'fi_print'); ?></label></th>
+                <th> <label for="address"><?php _e('Facebook', 'fi-print'); ?></label></th>
                 <td><input type="url" name="facebook" id="facebook" value="<?php echo esc_attr( get_the_author_meta( 'facebook', $user->ID ) ); ?>" class="regular-text" /><br /></td>
             </tr>
             <tr>
-                <th> <label for="address"><?php _e('Twitter', 'fi_print'); ?></label></th>
+                <th> <label for="address"><?php _e('Twitter', 'fi-print'); ?></label></th>
                 <td><input type="url" name="twitter" id="twitter" value="<?php echo esc_attr( get_the_author_meta( 'twitter', $user->ID ) ); ?>" class="regular-text" /><br /></td>
             </tr>
             <tr>
-                <th> <label for="address"><?php _e('Linkedin', 'fi_print'); ?></label></th>
+                <th> <label for="address"><?php _e('Linkedin', 'fi-print'); ?></label></th>
                 <td><input type="url" name="linkedin" id="linkedin" value="<?php echo esc_attr( get_the_author_meta( 'linkedin', $user->ID ) ); ?>" class="regular-text" /><br /></td>
             </tr>
             <tr>
-                <th> <label for="address"><?php _e('Google+', 'fi_print'); ?></label></th>
+                <th> <label for="address"><?php _e('Google+', 'fi-print'); ?></label></th>
                 <td><input type="url" name="google" id="google" value="<?php echo esc_attr( get_the_author_meta( 'google', $user->ID ) ); ?>" class="regular-text" /><br /></td>
             </tr>
             <tr>
-                <th> <label for="address"><?php _e('Rss', 'fi_print'); ?></label></th>
+                <th> <label for="address"><?php _e('Rss', 'fi-print'); ?></label></th>
                 <td><input type="url" name="rss" id="rss" value="<?php echo esc_attr( get_the_author_meta( 'rss', $user->ID ) ); ?>" class="regular-text" /><br /></td>
             </tr>
 

@@ -23,7 +23,7 @@ function fi_print_activate_recommended_plugins() {
 		),
 		array(
 			'name'     => __( 'SiteOrigin Widgets Bundle', 'fi-print' ),
-			'slug'     => 'so-widgets-bundle',
+			'slug'     => 'fi-print',
 			'required' => true,
 		),
 

@@ -25,7 +25,7 @@ if ($menu = get_post_meta($pageid, 'fi_print_menu_select', true)) {
                     );
                 } else {
                      $args            = array(
-                     'theme_location' => __('primary','fi_print'),
+                     'theme_location' => __('primary','fi-print'),
                      'items_wrap'     => '<ul class="nav nav-spliter navbar-nav">%3$s</ul>',
                      'echo'           => true,
                      'fallback_cb'    => 'wp_page_menu()',

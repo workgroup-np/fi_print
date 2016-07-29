@@ -15,20 +15,18 @@ get_header();
     <div class="container">
         <div class="row">
         <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-                <div class="col-xs-12 col-lg-3 pull-right">
+                <div class="col-xs-12 col-lg-3">
                     <?php dynamic_sidebar( 'sidebar-1' ); ?>
                 </div>
                 <?php endif; ?>
 
-                <div class="col-xs-12 col-lg-9 pull-left">
+                <div class="col-xs-12 col-lg-9">
                     <div class="row">
                         <?php 
                         $paged = ( get_query_var('paged') );
-                        var_dump($paged);
                         $args = array(
                             'post_type'      =>'post',
-                            'posts_per_page' => 2,
-                            'paged'          => 1
+                            'paged'          => $paged
                             );
                         $the_query = new WP_Query( $args ); 
 
@@ -38,7 +36,6 @@ get_header();
                         <?php endwhile; ?>
                         <?php wp_reset_postdata(); ?>
 
-                        <?php var_dump($wp_query->max_num_pages); ?>
                         <?php if ($wp_query->max_num_pages>1) : ?>
                             <nav class="col-xs-12">
                                 <?php fi_print_pagination();  ?>

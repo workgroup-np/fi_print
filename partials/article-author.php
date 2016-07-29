@@ -1,7 +1,7 @@
 <?php // Exit if accessed directly
 if (!defined('ABSPATH')) {echo '<h1>Forbidden</h1>'; exit();} ?>
 <div class="author-info">
-  <h2><?php _e('ABOUT THE AUTHOR','fi_print');?></h2>
+  <h2><?php _e('ABOUT THE AUTHOR','fi-print');?></h2>
   <?php echo str_replace('avatar-130', '', get_avatar(get_the_author_meta('email'),170 )); ?>
   <div class="author-text">
     <h4><?php esc_attr(the_author()); ?></h4>

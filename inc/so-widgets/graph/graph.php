@@ -4,19 +4,19 @@ class Fi_Print_Graph_Widget extends SiteOrigin_Widget {
 	function __construct() {
 		parent::__construct(
 			'fi-print-graph',
-			__( 'Fi_Print: Graph', 'siteorigin-widgets' ),
+			__( 'Fi_Print: Graph', 'fi-print' ),
 			array(
-				'description' => __('Displays an contact graph details', 'siteorigin-widgets' ),
+				'description' => __('Displays an contact graph details', 'fi-print' ),
 
 				),
 			array(),
 			array(
 				'type' => array(
 					'type' => 'select',
-					'label' => __('Graph Type Icon Style', 'siteorigin-widgets'),
+					'label' => __('Graph Type Icon Style', 'fi-print'),
 					'options' => array(
-						'line' => __('Line Graph Style', 'siteorigin-widgets'),
-						'bar' => __('Bar Graph Style', 'siteorigin-widgets'),						
+						'line' => __('Line Graph Style', 'fi-print'),
+						'bar' => __('Bar Graph Style', 'fi-print'),						
 					)
 				),			
 
@@ -40,11 +40,11 @@ class Fi_Print_Graph_Widget extends SiteOrigin_Widget {
 						),
 						'color' => array(
 							'type' => 'select',
-							'label' => __('Select Color', 'siteorigin-widgets'),
+							'label' => __('Select Color', 'fi-print'),
 							'options' => array(
-								'red' => __('Red', 'siteorigin-widgets'),
-								'yellow' => __('Yellow', 'siteorigin-widgets'),						
-								'blue' => __('Blue', 'siteorigin-widgets'),						
+								'red' => __('Red', 'fi-print'),
+								'yellow' => __('Yellow', 'fi-print'),						
+								'blue' => __('Blue', 'fi-print'),						
 							)
 						),						
 					),

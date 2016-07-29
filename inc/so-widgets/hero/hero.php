@@ -17,7 +17,7 @@ class Fi_Print_Hero_Widget extends SiteOrigin_Widget {
 
 					'content' => array(
 						'type' => 'tinymce',
-						'label' => __( 'Content', 'so-widgets-bundle' ),
+						'label' => __( 'Content', 'fi-print' ),
 					),
 
 			)

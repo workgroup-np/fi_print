@@ -15,7 +15,7 @@ class Fi_Print_Slider_Widget extends SiteOrigin_Widget {
 				'slider_repeater' => array(
 					'type'  => 'repeater',
 					'label' => __('Slider Details.', 'fi-print'),
-					'item_name' => __('Frame', 'so-widgets-bundle'),
+					'item_name' => __('Frame', 'fi-print'),
 					'item_label' => array(
 						'selector' => "[id*='frames-url']",
 						'update_event' => 'change',
@@ -29,21 +29,21 @@ class Fi_Print_Slider_Widget extends SiteOrigin_Widget {
 
 					'content' => array(
 						'type' => 'tinymce',
-						'label' => __( 'Content', 'so-widgets-bundle' ),
+						'label' => __( 'Content', 'fi-print' ),
 					),
 					'content_align' => array(
 						'type'     => 'select',
-						'label'    => __( 'Content Alignment', 'widget-form-fields-text-domain' ),
+						'label'    => __( 'Content Alignment', 'fi-print' ),
 						'default'  => 'the_other_thing',
 						'options'  => array(
-							'left'   => __( 'Align Left', 'widget-form-fields-text-domain' ),
-							'right'  => __( 'Align Right', 'widget-form-fields-text-domain' ),
-							'center' => __( 'Align Center', 'widget-form-fields-text-domain' ),
+							'left'   => __( 'Align Left', 'fi-print' ),
+							'right'  => __( 'Align Right', 'fi-print' ),
+							'center' => __( 'Align Center', 'fi-print' ),
 						),
 					),
 					'overlay_checkbox' => array(
 					        'type' => 'checkbox',
-					        'label' => __( 'Enable Overlay?', 'widget-form-fields-text-domain' ),
+					        'label' => __( 'Enable Overlay?', 'fi-print' ),
 					        'default' => false
 					 ),
 

@@ -19,7 +19,7 @@ $portfolio_query=new WP_Query($args);
             );
             $categories = get_categories( $arguments );?>
             <div id="projects-filter" class="shuffle-filter">
-                <a href="#"  class="active" data-group="all"><?php _e( 'All', 'fi_print' ); ?></a>
+                <a href="#"  class="active" data-group="all"><?php _e( 'All', 'fi-print' ); ?></a>
                 <?php foreach($categories as $i=>$category) { ?>
                 <a data-group="<?php echo $category->slug; ?>" href="#"><?php echo $category->name; ?></a>
                 <?php } ?>
@@ -68,7 +68,7 @@ $portfolio_query=new WP_Query($args);
                             }
                         ?></p>
                       </div>
-                      <div class="card-plus"><?php _e('+','fi_print');?></div>
+                      <div class="card-plus"><?php _e('+','fi-print');?></div>
                     </a>
                 </div>
                 <div class="card card-portfolio-1">
@@ -85,19 +85,19 @@ $portfolio_query=new WP_Query($args);
                     <div class="card-img-overlay">
                         <dl>
                             <?php if($budget && $budget!=""){
-                                echo '<dt>'.__('Budget:','fi_print').'</dt>';
+                                echo '<dt>'.__('Budget:','fi-print').'</dt>';
                                 echo '<dd>'.esc_attr($budget).'</dd>';
                             }?>
                             <?php if($advisor && $advisor!=""){
-                                echo '<dt>'.__('Advisor:','fi_print').'</dt>';
+                                echo '<dt>'.__('Advisor:','fi-print').'</dt>';
                                 echo '<dd>'.esc_attr($advisor).'</dd>';
                             }?>
                             <?php if($duration && $duration!=""){
-                                echo '<dt>'.__('Duration:','fi_print').'</dt>';
+                                echo '<dt>'.__('Duration:','fi-print').'</dt>';
                                 echo '<dd>'.esc_attr($duration).'</dd>';
                             }?>
                             <?php if($satisfaction && $satisfaction!=""){
-                                echo '<dt>'.__('Satisfaction:','fi_print').'</dt>';
+                                echo '<dt>'.__('Satisfaction:','fi-print').'</dt>';
                                 echo '<dd>'.esc_attr($satisfaction).'</dd>';
                             }  ?>
                         </dl>

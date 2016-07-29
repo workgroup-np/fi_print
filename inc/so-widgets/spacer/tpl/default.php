@@ -1,0 +1,1 @@
+<div class="spacer" style="padding-top:<?php echo esc_attr($instance['space'])?>px;"></div>
