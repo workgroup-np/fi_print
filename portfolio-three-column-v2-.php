@@ -4,10 +4,15 @@
 if (!defined('ABSPATH')) {echo '<h1>Forbidden</h1>'; exit();} get_header(); ?>
 <?php  global $fi_print_options;
 $number=esc_attr($fi_print_options['portfolio_number']);
-$args=array('post_type'=>'portfolio','posts_per_page'=>$number,'post_status'=>'publish');
-$portfolio_query=new WP_Query($args);
-$w='360';
-$h='345';
+$paged=(get_query_var('paged'))?get_query_var('paged'):1;
+$args=array(
+    'post_type'=>'portfolio',
+    'paged'=>$paged,
+    'posts_per_page'=>$number,
+    'order'=>'DESC',
+    'orderby'=>'date'
+);
+$portfolio_query= query_posts($args); global $wp_query;
 ?>
     <section class="p-t-0">
         <div class="container">
@@ -24,10 +29,10 @@ $h='345';
                 <a data-group="<?php echo $category->slug; ?>" href="#"><?php echo $category->name; ?></a>
                 <?php } ?>
             </div>
-            <?php if ($portfolio_query->have_posts()) : ?>
+            <?php if (have_posts()) : ?>
           <div id="shuffle-grid" class="row">
             <div class="col-xs-1 shuffle-sizer"></div>
-            <?php while ($portfolio_query->have_posts()) : $portfolio_query->the_post(); ?>
+            <?php while (have_posts()) : the_post(); ?>
             <?php
             $portfolio_item_title = get_the_title( $post->ID );
             $image_url= wp_get_attachment_thumb_url( get_post_thumbnail_id($post->ID) );
@@ -46,7 +51,6 @@ $h='345';
                 
                     <?php $thumbnail = get_post_thumbnail_id($post->ID);
                        $img_url = wp_get_attachment_image_src( $thumbnail,'full'); //get img URL
-                       $n_img = aq_resize( $img_url[0], $width = $w, $height = $h, $crop = true, $single = true, $upscale = true );
                     ?>
                   <div class="card card-portfolio-3" style="background-image: url(<?php echo esc_url($img_url[0]);?>)">
                     <div class="card-block">
@@ -70,10 +74,38 @@ $h='345';
             <?php endwhile; ?>
         </div>
         <br><br>
-        <nav class="text-xs-center">
-            <ul class="pagination">
-                <?php if ($wp_query->max_num_pages>1) : fi_print_pagination(); endif; ?>
-            </ul>
+        <nav class="text-xs-center" role="pagination">
+            <?php $total_pages=$wp_query->max_num_pages; 
+            $big=999999999;
+            $args=array(
+                'base'=>str_replace($big, "%#%", esc_url(get_pagenum_link($big))),
+                'current'=>$paged,
+                'total'=>$total_pages,
+                'type'=>'array',
+                'next_text'=>'»',
+                'prev_text'=>'«',
+                'prev_next'=>false,
+                'before_page_number' => '<span class="page-link">',
+                'after_page_number' => '</span>',
+            );
+
+            $links= paginate_links($args);
+            if(count($links)>0) :
+            echo '<ul class="pagination">';
+            $i=1;
+            foreach ($links as $link) {
+            if($i==$paged)
+                $active="active";
+            else
+                $active="";
+            ?>
+            <li class="page-item <?php echo $active; ?>"><?php echo $link; ?></li>
+            <?php
+            $i++;
+            }
+            echo '</ul>';
+            endif;
+            ?>
         </nav>
     <?php else : ?>
         <?php get_template_part('partials/nothing-found'); ?>

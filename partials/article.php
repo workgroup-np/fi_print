@@ -5,8 +5,8 @@ echo '<h1>Forbidden</h1>';
 exit();
 } 
 global $post; $author_id=$post->post_author;?>
-<div id="post-<?php the_ID(); ?>" <?php post_class("blog-item");?>>
-	<div class="col-xs-12 col-md-6 col-lg-4">
+<div class="col-xs-12 col-md-6 col-lg-4">
+	<div id="post-<?php the_ID(); ?>" <?php post_class("blog-item");?>>
 		<div class="card card-content">
 			<?php if ( has_post_thumbnail() ) :
 

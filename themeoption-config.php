@@ -1402,6 +1402,23 @@
             ),
         )
     ) );
+ Redux::setSection( $opt_name, array(
+        'title'      => __('Portfolio', 'fi-print'),
+        'desc'       => __('<span class="redux-title">Control Portfolio Pages</span>', 'fi-print'),
+        'icon'       => 'el el-comment',
+        'icon_class' => '',
+        'subsection' => $fi_print_customizer_subsection,
+        'customizer' => true,
+        'fields'     => array(
+            array(
+                'title'   => __('Portfolio Number', 'fi-print'),
+                'desc'    => __('Number of portfolio elements to display in portfolio page', 'fi-print'),
+                'id'      => 'portfolio_number',
+                'type'    => 'text',
+                'default' => '10',
+            ),
+        )
+    ) );
 
     /*
      * <--- END SECTIONS

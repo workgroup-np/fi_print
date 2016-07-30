@@ -350,5 +350,22 @@ function custom_row_style_attributes( $attributes, $args ) {
 
 		return $attributes;
 }
+function fi_print_the_excerpt_max_charlength($charlength) {
+    $excerpt = get_the_excerpt();
+    $charlength++;
 
+    if ( mb_strlen( $excerpt ) > $charlength ) {
+        $subex = mb_substr( $excerpt, 0, $charlength - 7 );
+        $exwords = explode( ' ', $subex );
+        $excut = - ( mb_strlen( $exwords[ count( $exwords ) - 1 ] ) );
+        if ( $excut < 0 ) {
+            echo mb_substr( $subex, 0, $excut );
+        } else {
+            echo $subex;
+        }
+        echo '...';
+    } else {
+        echo $excerpt;
+    }
+}
 
