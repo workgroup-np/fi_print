@@ -3,11 +3,11 @@ if ( !defined('ABSPATH') ) {
     echo '<h1>Forbidden</h1>'; 
     exit(); 
 }
-$pageid                =get_the_ID();
-$page_setting_title    =get_post_meta( $pageid, 'fi_print_title',true);
-$page_setting_image    =get_post_meta( $pageid, 'fi_print_image',true);
-$section_class="page-header";
-$ol_class="breadcrumb";
+$pageid             =get_the_ID();
+$page_setting_title =get_post_meta( $pageid, 'fi_print_title',true);
+$page_setting_image =get_post_meta( $pageid, 'fi_print_image',true);
+$section_class      ="page-header";
+$ol_class           ="breadcrumb";
 if( !empty($page_setting_image) ){
 
     $section_class="page-header bg-img";
@@ -23,7 +23,7 @@ if( !empty($page_setting_image) ){
               <li><a href="<?php echo esc_url(home_url());?>"><?php _e('Home', 'fi-print'); ?></a></li>
               <li class="active"><?php the_title();?></li>
             </ol>
-            <h1><?php if( is_single() ){ the_title();} else { echo esc_html($page_setting_title); }?></h1>
+            <h1><?php if( !is_page() ){ the_title();} else { echo esc_html($page_setting_title); }?></h1>
           </header>
         </div>
       </section>

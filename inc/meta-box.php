@@ -4,7 +4,7 @@ function fi_print_cmb_metaboxes() {
     $prefix = 'fi_print_';
      $cmb = new_cmb2_box( array(
         'id'            => 'page_metabox',
-        'title'         => __( 'Page Settings', 'cmb2' ),
+        'title'         => __( 'Page Settings', 'fi-print' ),
         'object_types'  => array( 'page', ), // Post type
         'context'       => 'normal',
         'priority'      => 'high',
@@ -12,22 +12,22 @@ function fi_print_cmb_metaboxes() {
     ) );
 
     $cmb->add_field( array(
-        'name'       => __( 'Page Title', 'cmb2' ),
-        'desc'       => __( 'One line  description of the page', 'cmb2' ),
+        'name'       => __( 'Page Title', 'fi-print' ),
+        'desc'       => __( 'One line  description of the page', 'fi-print' ),
         'id'         => $prefix . 'title',
         'type'       => 'text',
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
     ) );
 
     $cmb->add_field( array(
-        'name' => __( 'Breadcrumb Background image', 'cmb2' ),
+        'name' => __( 'Breadcrumb Background image', 'fi-print' ),
         'id'   => $prefix . 'image',
         'type' => 'file',
     ) );
 
     $cmb = new_cmb2_box( array(
         'id'            => 'advisor_metabox',
-        'title'         => __( 'Adviso\'s Details', 'cmb2' ),
+        'title'         => __( 'Adviso\'s Details', 'fi-print' ),
         'object_types'  => array( 'advisor', ), // Post type
         'context'       => 'normal',
         'priority'      => 'high',
@@ -97,12 +97,12 @@ function fi_print_cmb_metaboxes() {
     $group_field_id = $cmb->add_field( array(
     'id'          => $prefix.'advisor_attribute_repeat_group',
     'type'        => 'group',
-    'description' => __( 'Advisor\'s Attributes', 'cmb2' ),
+    'description' => __( 'Advisor\'s Attributes', 'fi-print' ),
     // 'repeatable'  => false, // use false if you want non-repeatable group
     'options'     => array(
-    'group_title'   => __( 'Attribute {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
-    'add_button'    => __( 'Add Another Attribute', 'cmb2' ),
-    'remove_button' => __( 'Remove Attribute', 'cmb2' ),
+    'group_title'   => __( 'Attribute {#}', 'fi-print' ), // since version 1.1.4, {#} gets replaced by row number
+    'add_button'    => __( 'Add Another Attribute', 'fi-print' ),
+    'remove_button' => __( 'Remove Attribute', 'fi-print' ),
     'sortable'      => true, // beta
      'closed'     => true, // true to have the groups closed by default
     ),
@@ -131,7 +131,7 @@ function fi_print_cmb_metaboxes() {
 
     $cmb = new_cmb2_box( array(
         'id'            => 'service_metabox',
-        'title'         => __( 'Service Details', 'cmb2' ),
+        'title'         => __( 'Service Details', 'fi-print' ),
         'object_types'  => array( 'service', ), // Post type
         'context'       => 'normal',
         'priority'      => 'high',
@@ -139,7 +139,7 @@ function fi_print_cmb_metaboxes() {
     ) );
 
     $cmb->add_field( array(
-        'name'       => __( 'Service Description', 'cmb2' ),
+        'name'       => __( 'Service Description', 'fi-print' ),
         'id'         => $prefix . 'service',
         'type'       => 'textarea',
         //'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value

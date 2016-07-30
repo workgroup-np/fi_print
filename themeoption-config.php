@@ -74,8 +74,8 @@
         //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
         'allow_sub_menu'       => false,
         // Show the sections below the admin menu item or not
-        'menu_title'           => __( 'Theme Options', 'redux-framework' ),
-        'page_title'           => __( 'Theme Options', 'redux-framework' ),
+        'menu_title'           => __( 'Theme Options', 'fi-print' ),
+        'page_title'           => __( 'Theme Options', 'fi-print' ),
         // You will need to generate a Google API key to use this feature.
         // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
         'google_api_key'       => '',
@@ -176,19 +176,19 @@
 //    $args['admin_bar_links'][] = array(
 //        'id'    => 'redux-docs',
 //        'href'  => 'http://docs.reduxframework.com/',
-//        'title' => __( 'Documentation', 'redux-framework' ),
+//        'title' => __( 'Documentation', 'fi-print' ),
 //    );
 
 //    $args['admin_bar_links'][] = array(
 //        //'id'    => 'redux-support',
 //        'href'  => 'https://github.com/ReduxFramework/redux-framework/issues',
-//        'title' => __( 'Support', 'redux-framework' ),
+//        'title' => __( 'Support', 'fi-print' ),
 //    );
 
 //    $args['admin_bar_links'][] = array(
 //        'id'    => 'redux-extensions',
 //        'href'  => 'reduxframework.com/extensions',
-//        'title' => __( 'Extensions', 'redux-framework' ),
+//        'title' => __( 'Extensions', 'fi-print' ),
 //    );
 
     // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
@@ -221,13 +221,13 @@
         } else {
             $v = str_replace( '-', '_', $args['opt_name'] );
         }
-//        $args['intro_text'] = sprintf( __( '<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'redux-framework' ), $v );
+//        $args['intro_text'] = sprintf( __( '<p>Did you know that Redux sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'fi-print' ), $v );
     } else {
-//        $args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'redux-framework' );
+//        $args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'fi-print' );
     }
 
     // Add content after the form.
-//    $args['footer_text'] = __( '<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'redux-framework' );
+//    $args['footer_text'] = __( '<p>This text is displayed below the options panel. It isn\'t required, but more info is always better! The footer_text field accepts all HTML.</p>', 'fi-print' );
 
     Redux::setArgs( $opt_name, $args );
 
@@ -243,19 +243,19 @@
 //    $tabs = array(
 //        array(
 //            'id'      => 'redux-help-tab-1',
-//            'title'   => __( 'Theme Information 1', 'redux-framework' ),
-//            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'redux-framework' )
+//            'title'   => __( 'Theme Information 1', 'fi-print' ),
+//            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'fi-print' )
 //        ),
 //        array(
 //            'id'      => 'redux-help-tab-2',
-//            'title'   => __( 'Theme Information 2', 'redux-framework' ),
-//            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'redux-framework' )
+//            'title'   => __( 'Theme Information 2', 'fi-print' ),
+//            'content' => __( '<p>This is the tab content, HTML is allowed.</p>', 'fi-print' )
 //        )
 //    );
 //    Redux::setHelpTab( $opt_name, $tabs );
 
     // Set the help sidebar
-//    $content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'redux-framework' );
+//    $content = __( '<p>This is the sidebar content, HTML is allowed.</p>', 'fi-print' );
 //    Redux::setHelpSidebar( $opt_name, $content );
 
 
@@ -294,9 +294,9 @@
         $fi_print_customizer_subsection = true;
 
         Redux::setSection( $opt_name, array(
-            'title'            => __( 'Theme Options', 'redux-framework' ),
+            'title'            => __( 'Theme Options', 'fi-print' ),
             'id'               => 'fi_print_theme_options',
-            'desc'             => __( 'Use the options below to customize your theme!', 'redux-framework' ),
+            'desc'             => __( 'Use the options below to customize your theme!', 'fi-print' ),
             'customizer_width' => '400px',
             'icon'             => 'el el-home',
             'customizer'       => true,
@@ -322,9 +322,9 @@
     // -----------------------------------------------------------------------------------
 
     Redux::setSection( $opt_name, array(
-        'title'      => __('General Settings', 'redux-framework'),
-        'header'     => __('Welcome to the Simple Options Framework Demo', 'redux-framework'),
-        'desc'       => __('<span class="redux-title">Logo & Favicon Settings</span>', 'redux-framework'),
+        'title'      => __('General Settings', 'fi-print'),
+        'header'     => __('Welcome to the Simple Options Framework Demo', 'fi-print'),
+        'desc'       => __('<span class="redux-title">Logo & Favicon Settings</span>', 'fi-print'),
         'icon_class' => '',
         'icon'       => 'el el-wrench',
         'subsection' => $fi_print_customizer_subsection,
@@ -333,8 +333,8 @@
             array(
                  'id'        => 'preloader',
                  'type'      => 'switch',
-                 'title'     => __('Activate preloader', 'barberia'),
-                 'subtitle'  => __('Smooth page loader for your site', 'barberia'),
+                 'title'     => __('Activate preloader', 'fi-print'),
+                 'subtitle'  => __('Smooth page loader for your site', 'fi-print'),
                  'default'   => '1',
              ),
 
@@ -342,36 +342,36 @@
             array(
                 'id'        => 'preloader-logo',
                 'type'      => 'media',
-                'title'     => __('Logo in the Preloader', 'barberia'),
+                'title'     => __('Logo in the Preloader', 'fi-print'),
                 'compiler'  => 'true',
                 'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                'subtitle'  => __('Upload logo to be displayed on prelaoder', 'barberia'),
+                'subtitle'  => __('Upload logo to be displayed on prelaoder', 'fi-print'),
 
             ),
               array(
                         'id'        => 'logo',
                         'type'      => 'media',
-                        'title'     => __('Logo Normal', 'barberia'),
+                        'title'     => __('Logo Normal', 'fi-print'),
                         'compiler'  => 'true',
                         'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'subtitle'  => __('Upload header logo for your website', 'barberia'),
+                        'subtitle'  => __('Upload header logo for your website', 'fi-print'),
 
                     ),
 
                     array(
                         'id'        => 'retinalogo',
                         'type'      => 'media',
-                        'title'     => __('Retina Normal', 'barberia'),
+                        'title'     => __('Retina Normal', 'fi-print'),
                         'compiler'  => 'true',
                         'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                        'subtitle'  => __('Upload header logo for your website', 'barberia'),
+                        'subtitle'  => __('Upload header logo for your website', 'fi-print'),
 
                     ),
 
                     array(
                         'id'        => 'top-bar-title-1',
                         'type'      => 'text',
-                        'title'     => __('Top Bar Title One', 'barberia'),
+                        'title'     => __('Top Bar Title One', 'fi-print'),
                         'compiler'  => 'true',
                         'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
 
@@ -380,7 +380,7 @@
                     array(
                         'id'        => 'top-bar-detail-1',
                         'type'      => 'text',
-                        'title'     => __('Top Bar Detail One', 'barberia'),
+                        'title'     => __('Top Bar Detail One', 'fi-print'),
                         'compiler'  => 'true',
                         'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
                     ),
@@ -388,7 +388,7 @@
                     array(
                         'id'        => 'top-bar-title-2',
                         'type'      => 'text',
-                        'title'     => __('Top Bar Title Two', 'barberia'),
+                        'title'     => __('Top Bar Title Two', 'fi-print'),
                         'compiler'  => 'true',
                         'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
 
@@ -397,14 +397,14 @@
                     array(
                         'id'        => 'top-bar-detail-2',
                         'type'      => 'text',
-                        'title'     => __('Top Bar Title Detail Two', 'barberia'),
+                        'title'     => __('Top Bar Title Detail Two', 'fi-print'),
                         'compiler'  => 'true',
                         'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
                     ),
                     array(
                         'id'        => 'top-bar-title-3',
                         'type'      => 'text',
-                        'title'     => __('Top Bar Title Three', 'barberia'),
+                        'title'     => __('Top Bar Title Three', 'fi-print'),
                         'compiler'  => 'true',
                         'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
 
@@ -413,16 +413,16 @@
                     array(
                         'id'        => 'top-bar-detail-3',
                         'type'      => 'text',
-                        'title'     => __('Top Bar Detail Three', 'barberia'),
+                        'title'     => __('Top Bar Detail Three', 'fi-print'),
                         'compiler'  => 'true',
                         'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
                     ),
 
 
             array(
-                'title'                      => __('Select a Sidebar', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Choose a sidebar to use with the page layout.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Choose a sidebar to use with the page layout.', 'redux-framework'),
+                'title'                      => __('Select a Sidebar', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Choose a sidebar to use with the page layout.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Choose a sidebar to use with the page layout.', 'fi-print'),
                 'id'                         => 'fi_print_general_sidebars',
                 'type'                       => 'select',
                 'data'                       => 'sidebars',
@@ -434,26 +434,26 @@
             ),
 
             array(
-                'title'                      => __('Enable Fixed Layout', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Check to enable fixed layout.<br />(i.e. Disable responsive layout)', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Check to enable fixed layout.<br />(i.e. Disable responsive layout)', 'redux-framework'),
+                'title'                      => __('Enable Fixed Layout', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Check to enable fixed layout.<br />(i.e. Disable responsive layout)', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Check to enable fixed layout.<br />(i.e. Disable responsive layout)', 'fi-print'),
                 'id'                         => 'fi_print_general_fixedlayoutswitch',
                 'type'                       => 'switch',
             ),
 
             array(
-                'title'                      => __('Enable Breadcrumbs', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Switch on to enable breadcrumbs.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Switch on to enable breadcrumbs.', 'redux-framework'),
+                'title'                      => __('Enable Breadcrumbs', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Switch on to enable breadcrumbs.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Switch on to enable breadcrumbs.', 'fi-print'),
                 'id'                         => 'fi_print_general_breadcrumbswitch',
                 'type'                       => 'switch',
                 'default'                    => '0',
             ),
 
             array(
-                'title'                      => __('Breadcrumb Delimiter', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Specify a custom delimiter to use instead of the default &#40; / &#41; when displaying breadcrumbs.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Specify a custom delimiter to use instead of the default &#40; / &#41; when displaying breadcrumbs.', 'redux-framework'),
+                'title'                      => __('Breadcrumb Delimiter', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Specify a custom delimiter to use instead of the default &#40; / &#41; when displaying breadcrumbs.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Specify a custom delimiter to use instead of the default &#40; / &#41; when displaying breadcrumbs.', 'fi-print'),
                 'default'                    => '/',
                 'id'                         => 'fi_print_general_breadcrumbdelimeter',
                 'type'                       => 'text',
@@ -468,32 +468,32 @@
             array(
                 'id'       => 'fi_print_section_general_code',
                 'type'     => $fi_print_section_field,
-                'title'    => __( ' ', 'redux-framework' ),
-                'subtitle' => __( '<span class="redux-title">Custom Code</span>', 'redux-framework' ),
+                'title'    => __( ' ', 'fi-print' ),
+                'subtitle' => __( '<span class="redux-title">Custom Code</span>', 'fi-print' ),
                 'indent'   => false,
             ),
 
             array(
-                'title'                      => __('Custom CSS', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Developers can use this to apply custom css. Use this to control, by styling of any element on the webpage by targeting id&#39;s and classes.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Developers can use this to apply custom css. Use this to control, by styling of any element on the webpage by targeting id&#39;s and classes.', 'redux-framework'),
+                'title'                      => __('Custom CSS', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Developers can use this to apply custom css. Use this to control, by styling of any element on the webpage by targeting id&#39;s and classes.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Developers can use this to apply custom css. Use this to control, by styling of any element on the webpage by targeting id&#39;s and classes.', 'fi-print'),
                 'id'                         => 'fi_print_general_customcss',
                 'type'                       => 'textarea',
                 'validate'                   => 'css',
             ),
 
 //          array(
-//              'title'                      => __('Custom jQuery - Front End', 'redux-framework'),
-//              $fi_print_subtitle_panel      => __('Developers can use this to apply custom jQuery which will only affect the front end of the website.<br /><br />Use this to control your site by adding great jQuery features.', 'redux-framework'),
-//              $fi_print_subtitle_customizer => __('Developers can use this to apply custom jQuery which will only affect the front end of the website.<br /><br />Use this to control your site by adding great jQuery features.', 'redux-framework'),
+//              'title'                      => __('Custom jQuery - Front End', 'fi-print'),
+//              $fi_print_subtitle_panel      => __('Developers can use this to apply custom jQuery which will only affect the front end of the website.<br /><br />Use this to control your site by adding great jQuery features.', 'fi-print'),
+//              $fi_print_subtitle_customizer => __('Developers can use this to apply custom jQuery which will only affect the front end of the website.<br /><br />Use this to control your site by adding great jQuery features.', 'fi-print'),
 //              'id'                         => 'fi_print_general_customjavafront',
 //              'type'                       => 'textarea',
 //          ),
 
             // Ensures ThinkUpThemes custom code is output
             array(
-                'title'    => __('Custom Code', 'redux-framework'),
-                'subtitle' => __('Custom Code', 'redux-framework'),
+                'title'    => __('Custom Code', 'fi-print'),
+                'subtitle' => __('Custom Code', 'fi-print'),
                 'id'       => 'fi_print_customization',
                 'type'     => 'fi_print_custom_code',
             ),
@@ -509,8 +509,8 @@
     // -----------------------------------------------------------------------------------
 
     Redux::setSection( $opt_name, array(
-        'title'      => __('Homepage', 'redux-framework'),
-        'desc'       => __('<span class="redux-title">Homepage Layout</span>', 'redux-framework'),
+        'title'      => __('Homepage', 'fi-print'),
+        'desc'       => __('<span class="redux-title">Homepage Layout</span>', 'fi-print'),
         'icon_class' => '',
         'icon'       => 'el el-home',
         'subsection' => $fi_print_customizer_subsection,
@@ -518,9 +518,9 @@
         'fields'     => array(
 
             array(
-                'title'                      => __('Homepage Layout', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Select page layout. This will only be applied to the home page.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Select page layout. This will only be applied to the home page.', 'redux-framework'),
+                'title'                      => __('Homepage Layout', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Select page layout. This will only be applied to the home page.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Select page layout. This will only be applied to the home page.', 'fi-print'),
                 'id'                         => 'fi_print_homepage_layout',
                 'type'                       => 'image_select',
                 'compiler'                   => true,
@@ -533,9 +533,9 @@
             ),
 
             array(
-                'title'                      => __('Select a Sidebar', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Choose a sidebar to use with the layout.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Choose a sidebar to use with the layout.', 'redux-framework'),
+                'title'                      => __('Select a Sidebar', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Choose a sidebar to use with the layout.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Choose a sidebar to use with the layout.', 'fi-print'),
                 'id'                         => 'fi_print_homepage_sidebars',
                 'type'                       => 'select',
                 'data'                       => 'sidebars',
@@ -549,15 +549,15 @@
             array(
                 'id'       => 'fi_print_section_homepage_slider',
                 'type'     => $fi_print_section_field,
-                'title'    => __( ' ', 'redux-framework' ),
-                'subtitle' => __( '<span class="redux-title">Homepage Slider</span>', 'redux-framework' ),
+                'title'    => __( ' ', 'fi-print' ),
+                'subtitle' => __( '<span class="redux-title">Homepage Slider</span>', 'fi-print' ),
                 'indent'   => false,
             ),
 
             array(
-                'title'                      => __('Enable Homepage Slider', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Switch on to enable home page slider.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Switch on to enable home page slider.', 'redux-framework'),
+                'title'                      => __('Enable Homepage Slider', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Switch on to enable home page slider.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Switch on to enable home page slider.', 'fi-print'),
                 'id'                         => 'fi_print_homepage_sliderswitch',
                 'type'                       => 'button_set',
                 'options'                    => array(
@@ -570,9 +570,9 @@
 
             array(
                 'id'                         => 'fi_print_homepage_slidername',
-                'title'                      => __('Homepage Slider Shortcode', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Input the shortcode of the slider you want to display. I.e. [shortcode_name].', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Input the shortcode of the slider you want to display. I.e. [shortcode_name].', 'redux-framework'),
+                'title'                      => __('Homepage Slider Shortcode', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Input the shortcode of the slider you want to display. I.e. [shortcode_name].', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Input the shortcode of the slider you want to display. I.e. [shortcode_name].', 'fi-print'),
                 'type'                       => 'text',
                 'validate'                   => 'html',
                 'required'                   => array(
@@ -584,9 +584,9 @@
 
             array(
                 'id'                         => 'fi_print_homepage_sliderpreset',
-                'title'                      => __('Built-In Slider', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Unlimited slides with drag and drop sortings.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Unlimited slides with drag and drop sortings.', 'redux-framework'),
+                'title'                      => __('Built-In Slider', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Unlimited slides with drag and drop sortings.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Unlimited slides with drag and drop sortings.', 'fi-print'),
                 'type'                       => 'fi_print_slider_free',
                 'required'                   => array(
                     array( 'fi_print_homepage_sliderswitch', '=',
@@ -597,9 +597,9 @@
 
             array(
                 'id'                         => 'fi_print_homepage_sliderpresetwidth',
-                'title'                      => __('Enable Full-Width Slider', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Switch on to enable full-width slider.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Switch on to enable full-width slider.', 'redux-framework'),
+                'title'                      => __('Enable Full-Width Slider', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Switch on to enable full-width slider.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Switch on to enable full-width slider.', 'fi-print'),
                 'type'                       => 'switch',
                 'default'                    => '1',
                 'required'                   => array(
@@ -612,9 +612,9 @@
             array(
                 'id'                         => 'fi_print_homepage_sliderpresetheight',
                 'type'                       => 'slider',
-                'title'                      => __('Slider Height (Max)', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Specify the maximum slider height (px).', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Specify the maximum slider height (px).', 'redux-framework'),
+                'title'                      => __('Slider Height (Max)', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Specify the maximum slider height (px).', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Specify the maximum slider height (px).', 'fi-print'),
                 "default"                    => "350",
                 "min"                        => "200",
                 "step"                       => "5",
@@ -629,48 +629,48 @@
             array(
                 'id'       => 'fi_print_section_homepage_ctaintro',
                 'type'     => $fi_print_section_field,
-                'title'    => __( ' ', 'redux-framework' ),
-                'subtitle' => __( '<span class="redux-title">Call To Action - Intro</span>', 'redux-framework' ),
+                'title'    => __( ' ', 'fi-print' ),
+                'subtitle' => __( '<span class="redux-title">Call To Action - Intro</span>', 'fi-print' ),
                 'indent'   => false,
             ),
 
             array(
-                'title'   => __('Message', 'redux-framework'),
-                'desc'    => __('Check to enable intro on home page.', 'redux-framework'),
+                'title'   => __('Message', 'fi-print'),
+                'desc'    => __('Check to enable intro on home page.', 'fi-print'),
                 'id'      => 'fi_print_homepage_introswitch',
                 'type'    => 'checkbox',
                 'default' => '0',
             ),
 
             array(
-                $fi_print_subtitle_panel      => __('Enter a <strong>main</strong> message.<br /><br />This will be one of the first messages your visitors see. Use this to get their attention.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Enter a <strong>main</strong> message.<br /><br />This will be one of the first messages your visitors see. Use this to get their attention.', 'redux-framework'),
+                $fi_print_subtitle_panel      => __('Enter a <strong>main</strong> message.<br /><br />This will be one of the first messages your visitors see. Use this to get their attention.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Enter a <strong>main</strong> message.<br /><br />This will be one of the first messages your visitors see. Use this to get their attention.', 'fi-print'),
                 'id'                         => 'fi_print_homepage_introaction',
                 'type'                       => 'textarea',
                 'validate'                   => 'html',
             ),
 
             array(
-                $fi_print_subtitle_panel      => __('Enter a <strong>teaser</strong> message. <br /><br />Use this to provide more details about what you offer.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Enter a <strong>teaser</strong> message. <br /><br />Use this to provide more details about what you offer.', 'redux-framework'),
+                $fi_print_subtitle_panel      => __('Enter a <strong>teaser</strong> message. <br /><br />Use this to provide more details about what you offer.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Enter a <strong>teaser</strong> message. <br /><br />Use this to provide more details about what you offer.', 'fi-print'),
                 'id'                         => 'fi_print_homepage_introactionteaser',
                 'type'                       => 'textarea',
                 'validate'                   => 'html',
             ),
 
             array(
-                'title'                      => __('Button Text', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Input text to display on the action button.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Input text to display on the action button.', 'redux-framework'),
+                'title'                      => __('Button Text', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Input text to display on the action button.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Input text to display on the action button.', 'fi-print'),
                 'id'                         => 'fi_print_homepage_introactionbutton',
                 'type'                       => 'text',
                 'validate'                   => 'html',
             ),
 
             array(
-                'title'                      => __('Link', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Specify whether the action button should link to a page on your site, out to external webpage or disable the link altogether.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Specify whether the action button should link to a page on your site, out to external webpage or disable the link altogether.', 'redux-framework'),
+                'title'                      => __('Link', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Specify whether the action button should link to a page on your site, out to external webpage or disable the link altogether.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Specify whether the action button should link to a page on your site, out to external webpage or disable the link altogether.', 'fi-print'),
                 'id'                         => 'fi_print_homepage_introactionlink',
                 'type'                       => 'radio',
                 'options'                    => array(
@@ -681,9 +681,9 @@
             ),
 
             array(
-                'title'                      => __('Link to a page', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Select a target page for action button link.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Select a target page for action button link.', 'redux-framework'),
+                'title'                      => __('Link to a page', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Select a target page for action button link.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Select a target page for action button link.', 'fi-print'),
                 'id'                         => 'fi_print_homepage_introactionpage',
                 'type'                       => 'select',
                 'data'                       => 'pages',
@@ -695,9 +695,9 @@
             ),
 
             array(
-                'title'                      => __('Custom link', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Input a custom url for the action button link.<br>Add http:// if linking to an external webpage.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Input a custom url for the action button link.<br>Add http:// if linking to an external webpage.', 'redux-framework'),
+                'title'                      => __('Custom link', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Input a custom url for the action button link.<br>Add http:// if linking to an external webpage.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Input a custom url for the action button link.<br>Add http:// if linking to an external webpage.', 'fi-print'),
                 'id'                         => 'fi_print_homepage_introactioncustom',
                 'type'                       => 'text',
                 'validate'                   => 'html',
@@ -716,8 +716,8 @@
     // -----------------------------------------------------------------------------------
 
     Redux::setSection( $opt_name, array(
-        'title'      => __('Homepage (Featured)', 'redux-framework'),
-        'desc'       => __('<span class="redux-title">Display Pre-Designed Homepage Layout</span>', 'redux-framework'),
+        'title'      => __('Homepage (Featured)', 'fi-print'),
+        'desc'       => __('<span class="redux-title">Display Pre-Designed Homepage Layout</span>', 'fi-print'),
         'icon_class' => '',
         'icon'       => 'el el-pencil',
         'subsection' => $fi_print_customizer_subsection,
@@ -725,9 +725,9 @@
         'fields'     => array(
 
             array(
-                'title'                      => __('Enable Pre-Made Homepage ', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('switch on to enable pre-designed homepage layout.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('switch on to enable pre-designed homepage layout.', 'redux-framework'),
+                'title'                      => __('Enable Pre-Made Homepage ', 'fi-print'),
+                $fi_print_subtitle_panel      => __('switch on to enable pre-designed homepage layout.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('switch on to enable pre-designed homepage layout.', 'fi-print'),
                 'id'                         => 'fi_print_homepage_sectionswitch',
                 'type'                       => 'switch',
                 'default'                    => '1',
@@ -735,8 +735,8 @@
 
             array(
                 'id'       => 'fi_print_homepage_section1_icon',
-                'title'    => __('Content Area 1', 'redux-framework'),
-                'desc'     => __('Choose an icon for the section background.', 'redux-framework'),
+                'title'    => __('Content Area 1', 'fi-print'),
+                'desc'     => __('Choose an icon for the section background.', 'fi-print'),
                 'type'     => 'select',
                 'data'     => 'elusive-icons',
                 'required' => array(
@@ -748,7 +748,7 @@
 
             array(
                 'id'       => 'fi_print_homepage_section1_title',
-                'desc'     => __('Add a title to the section.', 'redux-framework'),
+                'desc'     => __('Add a title to the section.', 'fi-print'),
                 'type'     => 'text',
                 'validate' => 'html',
                 'required' => array(
@@ -760,7 +760,7 @@
 
             array(
                 'id'       => 'fi_print_homepage_section1_desc',
-                'desc'     => __('Add a description to the section.', 'redux-framework'),
+                'desc'     => __('Add a description to the section.', 'fi-print'),
                 'type'     => 'textarea',
                 'validate' => 'html',
                 'required' => array(
@@ -772,7 +772,7 @@
 
             array(
                 'id'       => 'fi_print_homepage_section1_link',
-                'desc'     => __('Link to a page', 'redux-framework'),
+                'desc'     => __('Link to a page', 'fi-print'),
                 'type'     => 'select',
                 'data'     => 'pages',
                 'required' => array(
@@ -784,8 +784,8 @@
 
             array(
                 'id'       => 'fi_print_homepage_section2_icon',
-                'title'    => __('Content Area 2', 'redux-framework'),
-                'desc'     => __('Choose an icon for the section background.', 'redux-framework'),
+                'title'    => __('Content Area 2', 'fi-print'),
+                'desc'     => __('Choose an icon for the section background.', 'fi-print'),
                 'type'     => 'select',
                 'data'     => 'elusive-icons',
                 'required' => array(
@@ -797,7 +797,7 @@
 
             array(
                 'id'       => 'fi_print_homepage_section2_title',
-                'desc'     => __('Add a title to the section.', 'redux-framework'),
+                'desc'     => __('Add a title to the section.', 'fi-print'),
                 'type'     => 'text',
                 'validate' => 'html',
                 'required' => array(
@@ -809,7 +809,7 @@
 
             array(
                 'id'       => 'fi_print_homepage_section2_desc',
-                'desc'     => __('Add a description to the section.', 'redux-framework'),
+                'desc'     => __('Add a description to the section.', 'fi-print'),
                 'type'     => 'textarea',
                 'validate' => 'html',
                 'required' => array(
@@ -821,7 +821,7 @@
 
             array(
                 'id'       => 'fi_print_homepage_section2_link',
-                'desc'     => __('Link to a page', 'redux-framework'),
+                'desc'     => __('Link to a page', 'fi-print'),
                 'type'     => 'select',
                 'data'     => 'pages',
                 'required' => array(
@@ -833,8 +833,8 @@
 
             array(
                 'id'       => 'fi_print_homepage_section3_icon',
-                'title'    => __('Content Area 3', 'redux-framework'),
-                'desc'     => __('Choose an icon for the section background.', 'redux-framework'),
+                'title'    => __('Content Area 3', 'fi-print'),
+                'desc'     => __('Choose an icon for the section background.', 'fi-print'),
                 'type'     => 'select',
                 'data'     => 'elusive-icons',
                 'required' => array(
@@ -846,7 +846,7 @@
 
             array(
                 'id'       => 'fi_print_homepage_section3_title',
-                'desc'     => __('Add a title to the section.', 'redux-framework'),
+                'desc'     => __('Add a title to the section.', 'fi-print'),
                 'type'     => 'text',
                 'validate' => 'html',
                 'required' => array(
@@ -858,7 +858,7 @@
 
             array(
                 'id'       => 'fi_print_homepage_section3_desc',
-                'desc'     => __('Add a description to the section.', 'redux-framework'),
+                'desc'     => __('Add a description to the section.', 'fi-print'),
                 'type'     => 'textarea',
                 'validate' => 'html',
                 'required' => array(
@@ -870,7 +870,7 @@
 
             array(
                 'id'       => 'fi_print_homepage_section3_link',
-                'desc'     => __('Link to a page', 'redux-framework'),
+                'desc'     => __('Link to a page', 'fi-print'),
                 'type'     => 'select',
                 'data'     => 'pages',
                 'required' => array(
@@ -888,8 +888,8 @@
     // -----------------------------------------------------------------------------------
 
     Redux::setSection( $opt_name, array(
-        'title'      => __('Header', 'redux-framework'),
-        'desc'       => __('<span class="redux-title">Control Header Content</span>', 'redux-framework'),
+        'title'      => __('Header', 'fi-print'),
+        'desc'       => __('<span class="redux-title">Control Header Content</span>', 'fi-print'),
         'icon'       => 'el el-chevron-up',
         'icon_class' => '',
         'subsection' => $fi_print_customizer_subsection,
@@ -897,18 +897,18 @@
         'fields'     => array(
 
             array(
-                'title'                      => __('Enable Search', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Switch on to enable header search.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Switch on to enable header search.', 'redux-framework'),
+                'title'                      => __('Enable Search', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Switch on to enable header search.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Switch on to enable header search.', 'fi-print'),
                 'id'                         => 'fi_print_header_searchswitch',
                 'type'                       => 'switch',
                 'default'                    => '0',
             ),
 
             array(
-                'title'                      => __('Enable Social Media Links', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Switch on to enable links to social media pages.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Switch on to enable links to social media pages.', 'redux-framework'),
+                'title'                      => __('Enable Social Media Links', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Switch on to enable links to social media pages.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Switch on to enable links to social media pages.', 'fi-print'),
                 'id'                         => 'fi_print_header_socialswitch',
                 'type'                       => 'switch',
                 'default'                    => '0',
@@ -917,15 +917,15 @@
             array(
                 'id'       => 'fi_print_section_header_social',
                 'type'     => $fi_print_section_field,
-                'title'    => __( ' ', 'redux-framework' ),
-                'subtitle' => __( '<span class="redux-title">Social Media Content</span>', 'redux-framework' ),
+                'title'    => __( ' ', 'fi-print' ),
+                'subtitle' => __( '<span class="redux-title">Social Media Content</span>', 'fi-print' ),
                 'indent'   => false,
             ),
 
             array(
-                'title'                      => __('Display Message', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Add a message here. E.g. &#34;Follow Us&#34;.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Add a message here. E.g. &#34;Follow Us&#34;.', 'redux-framework'),
+                'title'                      => __('Display Message', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Add a message here. E.g. &#34;Follow Us&#34;.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Add a message here. E.g. &#34;Follow Us&#34;.', 'fi-print'),
                 'id'                         => 'fi_print_header_socialmessage',
                 'type'                       => 'text',
                 'validate'                   => 'html',
@@ -933,16 +933,16 @@
 
             // Facebook social settings
             array(
-                'title'                      => __('Facebook', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Enable link to Facebook profile.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Enable link to Facebook profile.', 'redux-framework'),
+                'title'                      => __('Facebook', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Enable link to Facebook profile.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Enable link to Facebook profile.', 'fi-print'),
                 'id'                         => 'fi_print_header_facebookswitch',
                 'type'                       => 'switch',
                 'default'                    => '0',
             ),
 
             array(
-                'desc'     => __('Input the url to your Facebook page. <strong>Note:</strong> Add http:// as the url is an external link.', 'redux-framework'),
+                'desc'     => __('Input the url to your Facebook page. <strong>Note:</strong> Add http:// as the url is an external link.', 'fi-print'),
                 'id'       => 'fi_print_header_facebooklink',
                 'type'     => 'text',
                 'validate' => 'html',
@@ -954,7 +954,7 @@
             ),
 
             array(
-                'desc'     => __('Use Custom Facebook Icon', 'redux-framework'),
+                'desc'     => __('Use Custom Facebook Icon', 'fi-print'),
                 'id'       => 'fi_print_header_facebookiconswitch',
                 'type'     => 'checkbox',
                 'default'  => '0',
@@ -966,7 +966,7 @@
             ),
 
             array(
-                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'redux-framework'),
+                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'fi-print'),
                 'id'       => 'fi_print_header_facebookcustomicon',
                 'type'     => 'media',
                 'url'      => true,
@@ -979,16 +979,16 @@
 
             // Twitter social settings
             array(
-                'title'                      => __('Twitter', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Enable link to Twitter profile.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Enable link to Twitter profile.', 'redux-framework'),
+                'title'                      => __('Twitter', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Enable link to Twitter profile.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Enable link to Twitter profile.', 'fi-print'),
                 'id'                         => 'fi_print_header_twitterswitch',
                 'type'                       => 'switch',
                 'default'                    => '0',
             ),
 
             array(
-                'desc'     => __('Input the url to your Twitter page. <strong>Note:</strong> Add http:// as the url is an external link.', 'redux-framework'),
+                'desc'     => __('Input the url to your Twitter page. <strong>Note:</strong> Add http:// as the url is an external link.', 'fi-print'),
                 'id'       => 'fi_print_header_twitterlink',
                 'type'     => 'text',
                 'validate' => 'html',
@@ -1000,7 +1000,7 @@
             ),
 
             array(
-                'desc'     => __('Use Custom Twitter Icon', 'redux-framework'),
+                'desc'     => __('Use Custom Twitter Icon', 'fi-print'),
                 'id'       => 'fi_print_header_twittericonswitch',
                 'type'     => 'checkbox',
                 'default'  => '0',
@@ -1012,7 +1012,7 @@
             ),
 
             array(
-                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'redux-framework'),
+                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'fi-print'),
                 'id'       => 'fi_print_header_twittercustomicon',
                 'type'     => 'media',
                 'url'      => true,
@@ -1025,16 +1025,16 @@
 
             // Google+ social settings
             array(
-                'title'                      => __('Google+', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Enable link to Google+ profile.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Enable link to Google+ profile.', 'redux-framework'),
+                'title'                      => __('Google+', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Enable link to Google+ profile.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Enable link to Google+ profile.', 'fi-print'),
                 'id'                         => 'fi_print_header_googleswitch',
                 'type'                       => 'switch',
                 'default'                    => '0',
             ),
 
             array(
-                'desc'     => __('Input the url to your Google+ page. <strong>Note:</strong> Add http:// as the url is an external link.', 'redux-framework'),
+                'desc'     => __('Input the url to your Google+ page. <strong>Note:</strong> Add http:// as the url is an external link.', 'fi-print'),
                 'id'       => 'fi_print_header_googlelink',
                 'type'     => 'text',
                 'validate' => 'html',
@@ -1046,7 +1046,7 @@
             ),
 
             array(
-                'desc'     => __('Use Custom Google+ Icon', 'redux-framework'),
+                'desc'     => __('Use Custom Google+ Icon', 'fi-print'),
                 'id'       => 'fi_print_header_googleiconswitch',
                 'type'     => 'checkbox',
                 'default'  => '0',
@@ -1058,7 +1058,7 @@
             ),
 
             array(
-                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'redux-framework'),
+                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'fi-print'),
                 'id'       => 'fi_print_header_googlecustomicon',
                 'type'     => 'media',
                 'url'      => true,
@@ -1071,16 +1071,16 @@
 
             // LinkedIn social settings
             array(
-                'title'                      => __('LinkedIn', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Enable link to LinkedIn profile.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Enable link to LinkedIn profile.', 'redux-framework'),
+                'title'                      => __('LinkedIn', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Enable link to LinkedIn profile.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Enable link to LinkedIn profile.', 'fi-print'),
                 'id'                         => 'fi_print_header_linkedinswitch',
                 'type'                       => 'switch',
                 'default'                    => '0',
             ),
 
             array(
-                'desc'     => __('Input the url to your LinkedIn page. <strong>Note:</strong> Add http:// as the url is an external link.', 'redux-framework'),
+                'desc'     => __('Input the url to your LinkedIn page. <strong>Note:</strong> Add http:// as the url is an external link.', 'fi-print'),
                 'id'       => 'fi_print_header_linkedinlink',
                 'type'     => 'text',
                 'validate' => 'html',
@@ -1092,7 +1092,7 @@
             ),
 
             array(
-                'desc'     => __('Use Custom LinkedIn Icon', 'redux-framework'),
+                'desc'     => __('Use Custom LinkedIn Icon', 'fi-print'),
                 'id'       => 'fi_print_header_linkediniconswitch',
                 'type'     => 'checkbox',
                 'default'  => '0',
@@ -1104,7 +1104,7 @@
             ),
 
             array(
-                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'redux-framework'),
+                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'fi-print'),
                 'id'       => 'fi_print_header_linkedincustomicon',
                 'type'     => 'media',
                 'url'      => true,
@@ -1117,16 +1117,16 @@
 
             // Flickr social settings
             array(
-                'title'                      => __('Flickr', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Enable link to Flickr profile.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Enable link to Flickr profile.', 'redux-framework'),
+                'title'                      => __('Flickr', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Enable link to Flickr profile.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Enable link to Flickr profile.', 'fi-print'),
                 'id'                         => 'fi_print_header_flickrswitch',
                 'type'                       => 'switch',
                 'default'                    => '0',
             ),
 
             array(
-                'desc'     => __('Input the url to your Flickr page. <strong>Note:</strong> Add http:// as the url is an external link.', 'redux-framework'),
+                'desc'     => __('Input the url to your Flickr page. <strong>Note:</strong> Add http:// as the url is an external link.', 'fi-print'),
                 'id'       => 'fi_print_header_flickrlink',
                 'type'     => 'text',
                 'validate' => 'html',
@@ -1138,7 +1138,7 @@
             ),
 
             array(
-                'desc'     => __('Use Custom Flickr Icon', 'redux-framework'),
+                'desc'     => __('Use Custom Flickr Icon', 'fi-print'),
                 'id'       => 'fi_print_header_flickriconswitch',
                 'type'     => 'checkbox',
                 'default'  => '0',
@@ -1150,7 +1150,7 @@
             ),
 
             array(
-                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'redux-framework'),
+                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'fi-print'),
                 'id'       => 'fi_print_header_flickrcustomicon',
                 'type'     => 'media',
                 'url'      => true,
@@ -1163,16 +1163,16 @@
 
             // Last FM social settings
             array(
-                'title'                      => __('Last FM', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Enable link to Last FM profile.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Enable link to Last FM profile.', 'redux-framework'),
+                'title'                      => __('Last FM', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Enable link to Last FM profile.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Enable link to Last FM profile.', 'fi-print'),
                 'id'                         => 'fi_print_header_lastfmswitch',
                 'type'                       => 'switch',
                 'default'                    => '0',
             ),
 
             array(
-                'desc'     => __('Input the url to your Last FM page. <strong>Note:</strong> Add http:// as the url is an external link.', 'redux-framework'),
+                'desc'     => __('Input the url to your Last FM page. <strong>Note:</strong> Add http:// as the url is an external link.', 'fi-print'),
                 'id'       => 'fi_print_header_lastfmlink',
                 'type'     => 'text',
                 'validate' => 'html',
@@ -1184,7 +1184,7 @@
             ),
 
             array(
-                'desc'     => __('Use Custom Last FM Icon', 'redux-framework'),
+                'desc'     => __('Use Custom Last FM Icon', 'fi-print'),
                 'id'       => 'fi_print_header_lastfmiconswitch',
                 'type'     => 'checkbox',
                 'default'  => '0',
@@ -1196,7 +1196,7 @@
             ),
 
             array(
-                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'redux-framework'),
+                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'fi-print'),
                 'id'       => 'fi_print_header_lastfmcustomicon',
                 'type'     => 'media',
                 'url'      => true,
@@ -1209,16 +1209,16 @@
 
             // RSS social settings
             array(
-                'title'                      => __('RSS', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Enable link to RSS profile.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Enable link to RSS profile.', 'redux-framework'),
+                'title'                      => __('RSS', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Enable link to RSS profile.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Enable link to RSS profile.', 'fi-print'),
                 'id'                         => 'fi_print_header_rssswitch',
                 'type'                       => 'switch',
                 'default'                    => '0',
             ),
 
             array(
-                'desc'     => __('Input the url to your RSS page. <strong>Note:</strong> Add http:// as the url is an external link.', 'redux-framework'),
+                'desc'     => __('Input the url to your RSS page. <strong>Note:</strong> Add http:// as the url is an external link.', 'fi-print'),
                 'id'       => 'fi_print_header_rsslink',
                 'type'     => 'text',
                 'validate' => 'html',
@@ -1230,7 +1230,7 @@
             ),
 
             array(
-                'desc'     => __('Use Custom RSS Icon', 'redux-framework'),
+                'desc'     => __('Use Custom RSS Icon', 'fi-print'),
                 'id'       => 'fi_print_header_rssiconswitch',
                 'type'     => 'checkbox',
                 'default'  => '0',
@@ -1242,7 +1242,7 @@
             ),
 
             array(
-                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'redux-framework'),
+                'desc'     => __('Add a link to the image or upload one from your desktop. The image will be resized.', 'fi-print'),
                 'id'       => 'fi_print_header_rsscustomicon',
                 'type'     => 'media',
                 'url'      => true,
@@ -1261,8 +1261,8 @@
     // -----------------------------------------------------------------------------------
 
     Redux::setSection( $opt_name, array(
-        'title'      => __('Footer', 'redux-framework'),
-        'desc'       => __('<span class="redux-title">Control Footer Content</span>', 'redux-framework'),
+        'title'      => __('Footer', 'fi-print'),
+        'desc'       => __('<span class="redux-title">Control Footer Content</span>', 'fi-print'),
         'icon'       => 'el el-chevron-down',
         'icon_class' => '',
         'subsection' => $fi_print_customizer_subsection,
@@ -1270,9 +1270,9 @@
         'fields'     => array(
 
             array(
-                'title'                      => __('Footer Widgets Layout', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Select footer layout. Take complete control of the footer content by adding widgets.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Select footer layout. Take complete control of the footer content by adding widgets.', 'redux-framework'),
+                'title'                      => __('Footer Widgets Layout', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Select footer layout. Take complete control of the footer content by adding widgets.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Select footer layout. Take complete control of the footer content by adding widgets.', 'fi-print'),
                 'id'                         => 'fi_print_footer_layout',
                 'type'                       => 'image_select',
                 'compiler'                   => true,
@@ -1300,8 +1300,8 @@
                 ),
 
             array(
-                'title'   => __('Disable Footer Widgets', 'redux-framework'),
-                'desc'    => __('Check to disable footer widgets.', 'redux-framework'),
+                'title'   => __('Disable Footer Widgets', 'fi-print'),
+                'desc'    => __('Check to disable footer widgets.', 'fi-print'),
                 'id'      => 'fi_print_footer_widgetswitch',
                 'type'    => 'checkbox',
                 'default' => '0',
@@ -1315,8 +1315,8 @@
     // -----------------------------------------------------------------------------------
 
     Redux::setSection( $opt_name, array(
-        'title'      => __('Blog', 'redux-framework'),
-        'desc'       => __('<span class="redux-title">Control Blog Pages</span>', 'redux-framework'),
+        'title'      => __('Blog', 'fi-print'),
+        'desc'       => __('<span class="redux-title">Control Blog Pages</span>', 'fi-print'),
         'icon'       => 'el el-comment',
         'icon_class' => '',
         'subsection' => $fi_print_customizer_subsection,
@@ -1324,9 +1324,9 @@
         'fields'     => array(
 
             array(
-                'title'                      => __('Blog Layout', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Select blog page layout. Only applied to the main blog page and not individual posts.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Select blog page layout. Only applied to the main blog page and not individual posts.', 'redux-framework'),
+                'title'                      => __('Blog Layout', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Select blog page layout. Only applied to the main blog page and not individual posts.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Select blog page layout. Only applied to the main blog page and not individual posts.', 'fi-print'),
                 'id'                         => 'fi_print_blog_layout',
                 'type'                       => 'image_select',
                 'compiler'                   => true,
@@ -1338,9 +1338,9 @@
             ),
 
             array(
-                'title'                      => __('Select a Sidebar', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('<strong>Note:</strong> Sidebars will not be applied to homepage Blog. Control sidebars on the homepage from the &#39;Home Settings&#39; option.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('<strong>Note:</strong> Sidebars will not be applied to homepage Blog. Control sidebars on the homepage from the &#39;Home Settings&#39; option.', 'redux-framework'),
+                'title'                      => __('Select a Sidebar', 'fi-print'),
+                $fi_print_subtitle_panel      => __('<strong>Note:</strong> Sidebars will not be applied to homepage Blog. Control sidebars on the homepage from the &#39;Home Settings&#39; option.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('<strong>Note:</strong> Sidebars will not be applied to homepage Blog. Control sidebars on the homepage from the &#39;Home Settings&#39; option.', 'fi-print'),
                 'id'                         => 'fi_print_blog_sidebars',
                 'type'                       => 'select',
                 'data'                       => 'sidebars',
@@ -1352,9 +1352,9 @@
             ),
 
             array(
-                'title'                      => __('Post Content', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Control how much content you want to show from each post on the main blog page. Remember to control the full article content by using the Wordpress <a href="http://en.support.wordpress.com/splitting-content/more-tag/">more</a> tag in your post.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Control how much content you want to show from each post on the main blog page. Remember to control the full article content by using the Wordpress <a href="http://en.support.wordpress.com/splitting-content/more-tag/">more</a> tag in your post.', 'redux-framework'),
+                'title'                      => __('Post Content', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Control how much content you want to show from each post on the main blog page. Remember to control the full article content by using the Wordpress <a href="http://en.support.wordpress.com/splitting-content/more-tag/">more</a> tag in your post.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Control how much content you want to show from each post on the main blog page. Remember to control the full article content by using the Wordpress <a href="http://en.support.wordpress.com/splitting-content/more-tag/">more</a> tag in your post.', 'fi-print'),
                 'id'                         => 'fi_print_blog_postswitch',
                 'type'                       => 'radio',
                 'options'                    => array(
@@ -1367,15 +1367,15 @@
             array(
                 'id'       => 'fi_print_section_post_layout',
                 'type'     => $fi_print_section_field,
-                'title'    => __( ' ', 'redux-framework' ),
-                'subtitle' => __( '<span class="redux-title">Control Single Post Page</span>', 'redux-framework' ),
+                'title'    => __( ' ', 'fi-print' ),
+                'subtitle' => __( '<span class="redux-title">Control Single Post Page</span>', 'fi-print' ),
                 'indent'   => false,
             ),
 
             array(
-                'title'                      => __('Post Layout', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Select blog page layout. This will only be applied to individual posts and not the main blog page.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Select blog page layout. This will only be applied to individual posts and not the main blog page.', 'redux-framework'),
+                'title'                      => __('Post Layout', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Select blog page layout. This will only be applied to individual posts and not the main blog page.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Select blog page layout. This will only be applied to individual posts and not the main blog page.', 'fi-print'),
                 'id'                         => 'fi_print_post_layout',
                 'type'                       => 'image_select',
                 'compiler'                   => true,
@@ -1388,9 +1388,9 @@
             ),
 
             array(
-                'title'                      => __('Select a Sidebar', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('Choose a sidebar to use with the layout.', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('Choose a sidebar to use with the layout.', 'redux-framework'),
+                'title'                      => __('Select a Sidebar', 'fi-print'),
+                $fi_print_subtitle_panel      => __('Choose a sidebar to use with the layout.', 'fi-print'),
+                $fi_print_subtitle_customizer => __('Choose a sidebar to use with the layout.', 'fi-print'),
                 'id'                         => 'fi_print_post_sidebars',
                 'type'                       => 'select',
                 'data'                       => 'sidebars',
@@ -1402,56 +1402,6 @@
             ),
         )
     ) );
-
-
-    // -----------------------------------------------------------------------------------
-    //  14. Support
-    // -----------------------------------------------------------------------------------
-
-    Redux::setSection( $opt_name, array(
-        'title'      => __('Support', 'redux-framework'),
-        'desc'       => __('For premium support direct from the theme developers, or advice on customizations please <a href="http://www.fi_printthemes.com/themes/engrave/" target="_blank">upgrade</a> to Engrave premium or purchase a <a href="http://www.fi_printthemes.com/pricing/" target="_blank">Theme Subscription</a>.', 'redux-framework'),
-        'icon'       => 'el el-user',
-        'icon_class' => '',
-        'id'         => 'fi_print_section_support',
-        'subsection' => $fi_print_customizer_subsection,
-        'customizer' => true,
-        'fields'     => array(
-
-        )
-    ) );
-
-
-    // -----------------------------------------------------------------------------------
-    //  15. Upgrade Now
-    // -----------------------------------------------------------------------------------
-
-    Redux::setSection( $opt_name, array(
-        'title'      => __('Upgrade (10% off)', 'redux-framework'),
-        'desc'       => __('', 'redux-framework'),
-        'icon'       => 'el el-arrow-up',
-        'icon_class' => '',
-        'id'         => 'fi_print_section_upgrade',
-        'subsection' => false,
-        'customizer' => true,
-        'fields'     => array(
-
-            // Ensures ThinkUpThemes upgrade code is output
-            array(
-                'title'       => __('', 'redux-framework'),
-                $fi_print_subtitle_panel      => __('', 'redux-framework'),
-                $fi_print_subtitle_customizer => __('', 'redux-framework'),
-                'id'          => 'fi_print_upgrade_content',
-                'type'        => 'fi_print_upgrade',
-                'upgrade_url' => '//www.fi_printthemes.com/themes/engrave/',
-            ),
-        )
-    ) );
-
-    Redux::setSection( $opt_name, array(
-        'type' => 'divide',
-    ) );
-
 
     /*
      * <--- END SECTIONS
