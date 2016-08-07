@@ -930,7 +930,7 @@
                 'default'                    => '0',
                 'required'                   => array(
                     array( 'fi_print_menu_style', '=',
-                        array( 'navbar navbar-type-3' ),
+                        array( 'navbar navbar-type-3' ,'navbar navbar-type-2'),
                     ),
                 )
 
