@@ -1,12 +1,12 @@
 <?php
-// Template Name: Portfolio Three Column V2
+// Template Name: Portfolio Four Column
  // Exit if accessed directly
-if (!defined('ABSPATH')) {echo '<h1>Forbidden</h1>'; exit();} get_header(); ?>
+if (!defined('ABSPATH')) {echo '<h1>Forbidden</h1>'; exit();} get_header(); global $wp_query; ?>
 <?php  global $fi_print_options;
-$number=esc_attr($fi_print_options['portfolio_number']);
 $paged=(get_query_var('paged'))?get_query_var('paged'):1;
-$w="370";
-$h="295";
+$number=esc_attr($fi_print_options['portfolio_number']);
+$w="255";
+$h="212";
 $args=array(
     'post_type'=>'portfolio',
     'paged'=>$paged,
@@ -14,8 +14,7 @@ $args=array(
     'order'=>'DESC',
     'orderby'=>'date'
 );
-$portfolio_query= query_posts($args); global $wp_query;
-?>
+$portfolio_query= query_posts($args); global $wp_query;?>
     <section class="p-t-0">
         <div class="container">
            <?php
@@ -26,7 +25,7 @@ $portfolio_query= query_posts($args); global $wp_query;
             );
             $categories = get_categories( $arguments );?>
             <div id="projects-filter" class="shuffle-filter">
-                <a href="#"  class="active" data-group="all"><?php _e( 'All', 'fi-print' ); ?></a>
+                <a href="#"  class="active" data-group="all"><?php _e( 'All', 'fi_print' ); ?></a>
                 <?php foreach($categories as $i=>$category) { ?>
                 <a data-group="<?php echo $category->slug; ?>" href="#"><?php echo $category->name; ?></a>
                 <?php } ?>
@@ -49,30 +48,51 @@ $portfolio_query= query_posts($args); global $wp_query;
                 $filters = join( ",", $term_links );
             endif;
             ?>
-            <div class="col-xs-6 col-md-4 shuffle-item" data-groups='[<?php echo esc_attr($filters); ?>]'>
-                
+            <div class="col-xs-12 col-md-6 col-lg-3 shuffle-item" data-groups='[<?php echo esc_attr($filters); ?>]'>
+                <div class="card card-portfolio-1">
                     <?php $thumbnail = get_post_thumbnail_id($post->ID);
                        $img_url = wp_get_attachment_image_src( $thumbnail,'full'); //get img URL
                        $n_img = aq_resize( $img_url[0], $width = $w, $height = $h, $crop = true, $single = true, $upscale = true );
+                    ?><a href="<?php the_permalink();?>"><img class="card-img" src="<?php echo esc_url($n_img);?>" alt=""></a>
+                    <?php 
+                        $budget=get_post_meta(get_the_ID(), 'portfolio_budget',true);
+                        $advisor=get_post_meta(get_the_ID(), 'portfolio_advisor',true);
+                        $duration=get_post_meta(get_the_ID(), 'portfolio_duration',true);
+                        $satisfaction=get_post_meta(get_the_ID(), 'portfolio_satisfaction',true);
                     ?>
-                  <div class="card card-portfolio-3" style="background-image: url(<?php echo esc_url($n_img);?>)">
-                    <div class="card-block">
-                      <h5 class="card-title">
-                        <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
-                        <small><?php
-                            $filters = get_the_terms($post->ID,'portfolio_filter');
-                            $c_filter = '';
-                            if(!empty($filters)){
-                                foreach($filters as $f=>$filter){
-                                    $c_filter .=  ($f==0) ? $filter->name : ', '.$filter->name;
-                                }
-                                echo esc_html($c_filter);
-                            }
-                        ?></small>
-                      </h5>
-                      <p class="card-text"><?php fi_print_the_excerpt_max_charlength(150);?></p>
+                    <div class="card-img-overlay">
+                        <dl>
+                            <?php if($budget && $budget!=""){
+                                echo '<dt>'.__('Budget:','fi_print').'</dt>';
+                                echo '<dd>'.esc_attr($budget).'</dd>';
+                            }?>
+                            <?php if($advisor && $advisor!=""){
+                                echo '<dt>'.__('Advisor:','fi_print').'</dt>';
+                                echo '<dd>'.esc_attr($advisor).'</dd>';
+                            }?>
+                            <?php if($duration && $duration!=""){
+                                echo '<dt>'.__('Duration:','fi_print').'</dt>';
+                                echo '<dd>'.esc_attr($duration).'</dd>';
+                            }?>
+                            <?php if($satisfaction && $satisfaction!=""){
+                                echo '<dt>'.__('Satisfaction:','fi_print').'</dt>';
+                                echo '<dd>'.esc_attr($satisfaction).'</dd>';
+                            }  ?>
+                        </dl>
                     </div>
-                  </div>                
+                </div>
+                <h6><a href="<?php the_permalink();?>"><strong><?php the_title(); ?></strong></a></h6>
+                <p><?php
+                    $filters = get_the_terms($post->ID,'portfolio_filter');
+                    $c_filter = '';
+                    if(!empty($filters)){
+                        foreach($filters as $f=>$filter){
+                            $c_filter .=  ($f==0) ? $filter->name : ', '.$filter->name;
+                        }
+                        echo esc_html($c_filter);
+                    }
+                ?></p>
+                <br>
             </div>
             <?php endwhile; ?>
         </div>

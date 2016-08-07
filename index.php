@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {echo '<h1>Forbidden</h1>'; exit();} get_header(); ?>
 
                 <?php if ($wp_query->max_num_pages>1) : ?>
                     <div class="blog-pagination">
-                        <?php fi_print_pagination(); ?>
+                        <?php //fi_print_pagination(); ?>
                     </div>
                 <?php endif; ?>
                 <?php else : ?>

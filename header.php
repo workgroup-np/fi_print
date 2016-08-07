@@ -1,6 +1,7 @@
 <?php // Exit if accessed directly
 if ( !defined('ABSPATH') ) {
-	echo '<h1>Forbidden</h1>'; exit();
+	echo '<h1>Forbidden</h1>'; 
+	exit();
 	}
 ?>
 <!DOCTYPE html>
@@ -13,15 +14,10 @@ if ( !defined('ABSPATH') ) {
 <link rel="pingback" href="<?php esc_url( bloginfo('pingback_url') ); ?>" />
 <?php wp_head(); ?>
 </head>
-
 <?php global $fi_print_options;
-// echo "<pre>";
-// var_dump($fi_print_options);
-// echo "</pre>";
+if( $fi_print_options['fi_print_menu_style']!='navbar' ) $fi_print_options['top-bar'] = 0;
 ?>
-
 <body  <?php body_class(  ); ?>>
-
 	<?php if ( isset($fi_print_options['preloader'])  && $fi_print_options['preloader'] == 1) : ?>
 		<!-- Preloader -->
 		<div class="preloader">
@@ -37,7 +33,8 @@ if ( !defined('ABSPATH') ) {
 		<!-- END Preloader -->
 	<?php endif ; ?>
 	<!-- Navigation bar -->
-    <nav class="navbar">
+    <nav class="<?php echo esc_attr($fi_print_options['fi_print_menu_style']);?>">
+		<?php if( $fi_print_options['top-bar'] == 1 ): ?>
       	<div class="navbar-top clearfix">
         	<div class="container">
          	<?php
@@ -69,26 +66,41 @@ if ( !defined('ABSPATH') ) {
 	            </li>
 	        	<?php  endif; ?>
 	          </ul>
-        </div>
-      </div>
-
+        	</div>
+    	 </div>
+	<?php  endif; ?>
+	<?php if( $fi_print_options['fi_print_menu_style']=='navbar' ):?>
       <div class="navbar-bottom">
           <div class="container">
-
               <div class="navbar-left">
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">&#9776;</button>
                   <?php get_template_part('partials/navbar'); ?>
               </div>
-
               <div class="navbar-right">
-                  <a class="btn btn-secondary" href="#get-quote">Get a quote</a>
-              </div>
+              	<?php if( isset($fi_print_options['fi_print_menubutton_text']) && !empty($fi_print_options['fi_print_menubutton_text']) ):?>
+                  <a class="btn btn-secondary" href="<?php echo esc_url($fi_print_options['fi_print_menubutton_url']);?>"><?php echo esc_attr($fi_print_options['fi_print_menubutton_text']);?></a>
+                 <?php endif;?>
 
+				<?php if( isset($fi_print_options['fi_print_header_searchswitch'] ) && 
+					$fi_print_options['fi_print_header_searchswitch']==1 ):?>
+					<div class="navbar-search">
+						<button class="navbar-btn"><i class="fa fa-search"></i></button>
+						<form method="get" id="searchfrom">
+						<input type="text" name="s" placeholder="<?php _e('Enter your keyword...','fi_print');?>">
+						</form>
+					</div>
+				<?php endif;?>
+              </div>
           </div>
       </div>
-
+	<?php else: get_template_part('partials/header'); endif;?>
       <div class="navbar-backdrop"></div>
     </nav>
     <!-- END Navigation bar -->
-
+     <main>
+	<?php 
+	$page_setting_breadcrumb =get_post_meta( get_the_ID(), 'fi_print_breadcrumb_enable',true);
+	if ( $page_setting_breadcrumb=='on' ):
+	get_template_part('partials/breadcrumb');
+	endif;?>
 

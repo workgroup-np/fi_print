@@ -1,4 +1,4 @@
-<section class="bg-secondary section-xs">
+<section class="section-xs">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 col-md-9">

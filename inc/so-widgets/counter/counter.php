@@ -36,11 +36,50 @@ class Fi_Print_Counter_Widget extends SiteOrigin_Widget {
 					),
 				),
 
+				'settings' => array(
+					'type'   => 'section',
+					'label'  => __( 'Color Settings', 'fi-print' ),
+					'hide' => true,
+					'fields' => array(
+						'number_color' => array(
+							'type'    => 'color',
+							'label'   => __( 'Number Color', 'fi-print' ),
+							'default' => '#fff',
+						),
+
+						'title_color' => array(
+							'type'    => 'color',
+							'label'   => __( 'Title Color', 'fi-print' ),
+							'default' => '#fff',
+						),
+						
+	    			),
+				),
+
+
 			)
 		);
 	}
 	function get_template_name($instance){
 		return 'default';
+	}
+
+	function get_style_name( $instance ) {
+
+		return 'fi-print-counter';
+	}
+
+	function get_less_variables( $instance ) {
+
+		$less_vars = array();
+		if ( ! empty( $instance['settings']['number_color'] ) ) {
+			$less_vars['number_color'] = $instance['settings']['number_color'];
+		}
+		if ( ! empty( $instance['settings']['title_color'] ) ) {
+			$less_vars['title_color'] = $instance['settings']['title_color'];
+		}
+
+		return $less_vars;
 	}
 
 }

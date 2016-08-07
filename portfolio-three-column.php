@@ -5,6 +5,9 @@ if (!defined('ABSPATH')) {echo '<h1>Forbidden</h1>'; exit();} get_header(); ?>
 <?php  global $fi_print_options;
 $number=esc_attr($fi_print_options['portfolio_number']);
 $paged=(get_query_var('paged'))?get_query_var('paged'):1;
+
+$w='350';
+$h='279';
 $args=array(
     'post_type'=>'portfolio',
     'paged'=>$paged,
@@ -51,7 +54,8 @@ $portfolio_query= query_posts($args); global $wp_query;
                 <div class="card card-portfolio-2">
                     <?php $thumbnail = get_post_thumbnail_id($post->ID);
                        $img_url = wp_get_attachment_image_src( $thumbnail,'full'); //get img URL
-                    ?><a href="<?php the_permalink();?>"><img class="card-img" src="<?php echo esc_url($img_url[0]);?>" alt=""></a>
+                       $n_img = aq_resize( $img_url[0], $width = $w, $height = $h, $crop = true, $single = true, $upscale = true );
+                    ?><a href="<?php the_permalink();?>"><img class="card-img" src="<?php echo esc_url($n_img);?>" alt=""></a>
                     <?php 
                         $budget=get_post_meta(get_the_ID(), 'portfolio_budget',true);
                         $advisor=get_post_meta(get_the_ID(), 'portfolio_advisor',true);
