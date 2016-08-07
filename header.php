@@ -34,7 +34,7 @@ if( $fi_print_options['fi_print_menu_style']!='navbar' ) $fi_print_options['top-
 	<?php endif ; ?>
 	<!-- Navigation bar -->
     <nav class="<?php echo esc_attr($fi_print_options['fi_print_menu_style']);?>">
-		<?php if( $fi_print_options['top-bar'] == 1 ): ?>
+		<?php if( isset($fi_print_options['top-bar']) && $fi_print_options['top-bar'] == 1 ): ?>
       	<div class="navbar-top clearfix">
         	<div class="container">
          	<?php
@@ -80,16 +80,6 @@ if( $fi_print_options['fi_print_menu_style']!='navbar' ) $fi_print_options['top-
               	<?php if( isset($fi_print_options['fi_print_menubutton_text']) && !empty($fi_print_options['fi_print_menubutton_text']) ):?>
                   <a class="btn btn-secondary" href="<?php echo esc_url($fi_print_options['fi_print_menubutton_url']);?>"><?php echo esc_attr($fi_print_options['fi_print_menubutton_text']);?></a>
                  <?php endif;?>
-
-				<?php if( isset($fi_print_options['fi_print_header_searchswitch'] ) && 
-					$fi_print_options['fi_print_header_searchswitch']==1 ):?>
-					<div class="navbar-search">
-						<button class="navbar-btn"><i class="fa fa-search"></i></button>
-						<form method="get" id="searchfrom">
-						<input type="text" name="s" placeholder="<?php _e('Enter your keyword...','fi_print');?>">
-						</form>
-					</div>
-				<?php endif;?>
               </div>
           </div>
       </div>

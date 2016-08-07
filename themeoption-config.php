@@ -897,22 +897,6 @@
 
             array(
 
-                'title'                      => __('Enable Search', 'fi-print'),
-
-                $fi_print_subtitle_panel      => __('Switch on to enable header search.', 'fi-print'),
-
-                $fi_print_subtitle_customizer => __('Switch on to enable header search.', 'fi-print'),
-
-                'id'                         => 'fi_print_header_searchswitch',
-
-                'type'                       => 'switch',
-
-                'default'                    => '0',
-
-            ),
-
-            array(
-
                 'title'   => __('Main navigation options', 'redux-framework'),
 
                 'id'      => 'fi_print_menu_style',
@@ -931,6 +915,27 @@
 
                 'default' =>'navbar'
             ),
+            array(
+
+                'title'                      => __('Enable Search', 'fi-print'),
+
+                $fi_print_subtitle_panel      => __('Switch on to enable header search.', 'fi-print'),
+
+                $fi_print_subtitle_customizer => __('Switch on to enable header search.', 'fi-print'),
+
+                'id'                         => 'fi_print_header_searchswitch',
+
+                'type'                       => 'switch',
+
+                'default'                    => '0',
+                'required'                   => array(
+                    array( 'fi_print_menu_style', '=',
+                        array( 'navbar navbar-type-3' ),
+                    ),
+                )
+
+            ),
+
 
 
             array(
@@ -963,10 +968,6 @@
         )
 
     ) );
-
-
-
-
 
     // -----------------------------------------------------------------------------------
 
