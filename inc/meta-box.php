@@ -52,6 +52,16 @@ function fi_print_cmb_metaboxes() {
     ) );
     $cmb->add_field( array(
 
+        'name'       => __( 'Show Search', 'fi-print' ),
+
+        'desc'       => __( 'Check if you want to show search icon in the page for style other than default.', 'fi-print' ),
+
+        'id'         => $prefix . 'search',
+
+        'type'       => 'checkbox'
+    ) );
+    $cmb->add_field( array(
+
         'name'       => __( 'Page Title', 'fi-print' ),
 
         'desc'       => __( 'One line  description of the page', 'fi-print' ),

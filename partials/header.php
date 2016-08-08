@@ -4,12 +4,14 @@ if ( !defined('ABSPATH') ) {
   exit();
 	}
 global $fi_print_options;
+$flag=0;
 $pageid        =get_the_ID();
 $pagemenucheck =get_post_meta( $pageid, 'fi_print_menucheck',true);
 $pagemenustyle =get_post_meta( $pageid, 'fi_print_menustyle',true);
-if(isset($pagemenucheck) && $pagemenucheck=='on'){?>
-
-      <div class="<?php if( $pagemenustyle=='navbar navbar-type-2' ): echo 'container'; else: echo 'container-fluid'; endif;?>"><?php
+$pagesearch =get_post_meta( $pageid, 'fi_print_search',true);
+if(isset($pagemenucheck) && $pagemenucheck=='on'){
+  $flag=1;?>
+  <div class="<?php if( $pagemenustyle=='navbar navbar-type-2' ): echo 'container'; else: echo 'container-fluid'; endif;?>"><?php
 }
 else{?>
       <div class="<?php if( $fi_print_options['fi_print_menu_style']=='navbar navbar-type-2' ): echo 'container'; else: echo 'container-fluid'; endif;?>"><?php
@@ -29,9 +31,16 @@ else{?>
           <div class="navbar-right">
      			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">&#9776;</button>
               	<?php get_template_part('partials/navbar');
-
+              if(isset($pagemenucheck) && $pagemenucheck=='on' && $pagemenustyle!='navbar' && $pagesearch=="on"){?>
+                <div class="navbar-search">
+                  <button class="navbar-btn"><i class="fa fa-search"></i></button>
+                  <form method="get" id="searchfrom">
+                  <input type="text" name="s" placeholder="<?php _e('Enter your keyword...','fi_print');?>">
+                  </form>
+                </div><?php
+              }
       		    if( isset($fi_print_options['fi_print_header_searchswitch'] ) && 
-                $fi_print_options['fi_print_header_searchswitch']==1 ):?>
+                $fi_print_options['fi_print_header_searchswitch']==1 && $flag==0 ):?>
                 <div class="navbar-search">
                   <button class="navbar-btn"><i class="fa fa-search"></i></button>
                   <form method="get" id="searchfrom">
