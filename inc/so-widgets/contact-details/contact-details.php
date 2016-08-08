@@ -12,7 +12,10 @@ class Fi_Print_Contact_Details_Widget extends SiteOrigin_Widget {
 			array(),
 			array(
 
-				'address' => array(
+				'title' => array(
+					'type'  => 'text',
+					'label' => __( 'Title', 'fi-print' )
+				),'address' => array(
 					'type'  => 'textarea',
 					'label' => __( 'Enter your Address', 'fi-print' )
 				),

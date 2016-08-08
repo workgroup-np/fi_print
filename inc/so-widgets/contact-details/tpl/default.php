@@ -1,34 +1,13 @@
-<section class="section-sm p-t-0">
-<div class="row">
-        <div class="col-sm-4">
-                      <div class="media media-iconic">
-                        <div class="media-left">
-                          <i class="fa fa-map-marker"></i>
-                        </div>
-                        <div class="media-body">
-                          <p><?php echo wp_kses_post( nl2br($instance['address']) );?></p>
-                        </div>
-                      </div>
-        </div>
-        <div class="col-sm-4">
-                      <div class="media media-iconic">
-                        <div class="media-left">
-                          <i class="fa fa-phone"></i>
-                        </div>
-                        <div class="media-body">
-                          <p><?php echo wp_kses_post( nl2br($instance['phone']) );?></p>
-                        </div>
-                      </div>
-        </div>
-        <div class="col-sm-4">
-                      <div class="media media-iconic">
-                        <div class="media-left">
-                          <i class="fa fa-envelope"></i>
-                        </div>
-                        <div class="media-body">
-                          <p><?php echo wp_kses_post( nl2br($instance['email']) );?></p>
-                        </div>
-                      </div>
-        </div>
-    </div>
-</section>
+<h5><?php echo esc_attr( $instance['title'] );?></h5>
+<dl class="dl-horizontal row">
+<?php if($instance['address'] && $instance['address']!="" ):?>
+  <dt class="col-xs-4"><?php _e('Address:','fi_print');?></dt>
+  <dd class="col-xs-8"><?php echo wp_kses_post( nl2br($instance['address']) );?></dd>
+<?php endif; if($instance['phone'] && $instance['phone']!="" ):?>
+  <dt class="col-xs-4"><?php _e('Phone:','fi_print');?></dt>
+  <dd class="col-xs-8"><?php echo wp_kses_post( nl2br($instance['phone']) );?></dd>
+<?php endif; if($instance['email'] && $instance['email']!="" ):?>
+  <dt class="col-xs-4"><?php _e('Email:','fi_print');?></dt>
+  <dd class="col-xs-8"><?php echo wp_kses_post( nl2br($instance['email']) );?></dd>
+<?php endif;?>
+</dl>
