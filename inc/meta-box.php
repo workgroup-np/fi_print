@@ -23,7 +23,33 @@ function fi_print_cmb_metaboxes() {
     ) );
 
 
+    $cmb->add_field( array(
 
+        'name'       => __( 'Use Page Specific Menu', 'fi-print' ),
+
+        'desc'       => __( 'Check if you want to use specific menu style for this page.', 'fi-print' ),
+
+        'id'         => $prefix . 'menucheck',
+
+        'type'       => 'checkbox'
+    ) );
+    $cmb->add_field( array(
+    'name'             => 'Menu Style',
+    'desc'             => 'Select an menu style option',
+    'id'         => $prefix . 'menustyle',
+    'type'             => 'select',
+    'options' => array(
+
+        'navbar' => __('Default', 'redux-framework'),
+
+        'navbar navbar-type-2' => __('Style 2', 'redux-framework'), 
+
+        'navbar navbar-type-3' => __('Style 3', 'redux-framework'),  
+
+        ),
+
+    'default' =>'navbar'
+    ) );
     $cmb->add_field( array(
 
         'name'       => __( 'Page Title', 'fi-print' ),
@@ -36,8 +62,7 @@ function fi_print_cmb_metaboxes() {
 
         'show_on_cb' => 'cmb2_hide_if_no_cats', // function should return a bool value
 
-    ) );
-
+    ));
 
     $cmb->add_field( array(
 

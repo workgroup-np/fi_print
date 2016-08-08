@@ -31,9 +31,19 @@ if( $fi_print_options['fi_print_menu_style']!='navbar' ) $fi_print_options['top-
 			</div>
 		</div>
 		<!-- END Preloader -->
-	<?php endif ; ?>
-	<!-- Navigation bar -->
-    <nav class="<?php echo esc_attr($fi_print_options['fi_print_menu_style']);?>">
+	<?php endif ; 
+	$pageid        =get_the_ID();
+	$pagemenucheck =get_post_meta( $pageid, 'fi_print_menucheck',true);
+	$pagemenustyle =get_post_meta( $pageid, 'fi_print_menustyle',true);
+	if(isset($pagemenucheck) && $pagemenucheck=='on'){?>
+
+    	<nav class="<?php echo esc_attr($pagemenustyle);?>">
+	    <?php
+	}
+	else{?>
+    	<nav class="<?php echo esc_attr($fi_print_options['fi_print_menu_style']);?>"><?php
+	}
+	?>
 		<?php if( isset($fi_print_options['top-bar']) && $fi_print_options['top-bar'] == 1 ): ?>
       	<div class="navbar-top clearfix">
         	<div class="container">
@@ -68,9 +78,23 @@ if( $fi_print_options['fi_print_menu_style']!='navbar' ) $fi_print_options['top-
 	          </ul>
         	</div>
     	 </div>
-	<?php  endif; ?>
-	<?php if( $fi_print_options['fi_print_menu_style']=='navbar' ):?>
-      <div class="navbar-bottom">
+	<?php  endif; 
+	if(isset($pagemenucheck) && $pagemenucheck=='on' && $pagemenustyle=="navbar"):?>
+	<div class="navbar-bottom">
+          <div class="container">
+              <div class="navbar-left">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">&#9776;</button>
+                  <?php get_template_part('partials/navbar'); ?>
+              </div>
+              <div class="navbar-right">
+              	<?php if( isset($fi_print_options['fi_print_menubutton_text']) && !empty($fi_print_options['fi_print_menubutton_text']) ):?>
+                  <a class="btn btn-secondary" href="<?php echo esc_url($fi_print_options['fi_print_menubutton_url']);?>"><?php echo esc_attr($fi_print_options['fi_print_menubutton_text']);?></a>
+                 <?php endif;?>
+              </div>
+          </div>
+      </div><?php
+    elseif($pagemenucheck=='' && $fi_print_options['fi_print_menu_style']=='navbar'):?>
+     <div class="navbar-bottom">
           <div class="container">
               <div class="navbar-left">
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">&#9776;</button>

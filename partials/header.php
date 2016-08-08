@@ -4,8 +4,17 @@ if ( !defined('ABSPATH') ) {
   exit();
 	}
 global $fi_print_options;
+$pageid        =get_the_ID();
+$pagemenucheck =get_post_meta( $pageid, 'fi_print_menucheck',true);
+$pagemenustyle =get_post_meta( $pageid, 'fi_print_menustyle',true);
+if(isset($pagemenucheck) && $pagemenucheck=='on'){?>
+
+      <div class="<?php if( $pagemenustyle=='navbar navbar-type-2' ): echo 'container'; else: echo 'container-fluid'; endif;?>"><?php
+}
+else{?>
+      <div class="<?php if( $fi_print_options['fi_print_menu_style']=='navbar navbar-type-2' ): echo 'container'; else: echo 'container-fluid'; endif;?>"><?php
+}
 ?>
-      <div class="<?php if( $fi_print_options['fi_print_menu_style']=='navbar navbar-type-2' ): echo 'container'; else: echo 'container-fluid'; endif;?>">
           <div class="navbar-left">
             <?php
               if( isset( $fi_print_options['logo'] ) && $fi_print_options['logo']['url']!='') :?>
